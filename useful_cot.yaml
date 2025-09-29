@@ -1,0 +1,1415 @@
+templates:
+  multihop_one_entity_filter:
+  - question: "Which are the detection strategies for RaaS malware used by [intrusion_set]?"
+    path: [uses_malware, filter RaaS, uses_attack_pattern, detected_by]
+    target: [RaaS malware detection]
+  - question: "Which are the techniques of malware that target IoT devices used in [campaign]?"
+    path: [uses_malware, filter IoT, uses_attack_pattern]
+    target: [IoT malware techniques]
+  - question: "Which are the mitigation strategies for malware written in .NET used by [intrusion_set]?"
+    path: [uses_malware, filter .NET, uses_attack_pattern, mitigated_by]
+    target: [.NET malware mitigation]
+  - question: "Which are the mitigation strategies for malware that use VBS involved in [campaign]?"
+    path: [uses_malware, filter VBS, uses_attack_pattern, mitigated_by]
+    target: [VBS malware mitigation]
+  - question: "Which are the techniques of malware written in .NET involved in campaign of [intrusion_set]?"
+    path: [is_responsible, uses_malware, filter .NET, uses_attack_pattern]
+    target: [.NET malware techniques]
+  - question: "Which are the techniques of C or C++ malware used by [intrusion_set]?"
+    path: [uses_malware, filter C or C++, uses_attack_pattern]
+    target: [C or C++ malware techniques]
+  - question: "Which are the techniques of malware written in python involved in [campaign]?"
+    path: [uses_malware, filter python, uses_attack_pattern]
+    target: [python malware techniques]
+  - question: "Which are the target of in-memory malware used in [campaign]?"
+    path: [uses_malware, filter in-memory, uses_attack_pattern, targets]
+    target: [in-memory malware targets]
+  - question: "Which are the target of malware tailored towards ICS devices used by [intrusion_set]?"
+    path: [uses_malware, filter ICS, uses_attack_pattern, targets]
+    target: [ICS malware targets]
+  - question: "Which are the target of RPC-based backdoor employed by [intrusion_set]?"
+    path: [uses_malware, filter RPC-based backdoor, uses_attack_pattern, targets]
+    target: [RPC-based backdoor malware targets]
+  - question: "Which are the target of malware that steal credentials employed in [campaign]?"
+    path: [uses_malware, filter steal and credentials, uses_attack_pattern, targets]
+    target: [stealing credential malware targets]
+  - question: "Which are the platform of the techniques used by trojan in [campaign]?"
+    path: [uses_malware, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platform of the techniques used by worm involved in [campaign]?"
+    path: [uses_malware, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are the platform of the techniques used by backdoor used by [intrusion_set]?"
+    path: [uses_malware, filter backdoor, uses_attack_pattern, x_mitre_platforms]
+    target: [backdoor technique platform]
+  - question: "Which are the platform of the techniques of spyware used by [intrusion_set]?"
+    path: [uses_malware, filter spyware, uses_attack_pattern, x_mitre_platforms]
+    target: [spyware technique platform]
+  - question: "Which are the platform of the behaviour of trojan in [campaign]?"
+    path: [uses_malware, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platform of the behaviour of worm used by [intrusion_set]?"
+    path: [uses_malware, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are techniques that use token stealing and are used by [malware]?"
+    path: [uses_attack_pattern, filter token and steal]
+    target: [token stealing techniques]
+  - question: "Which are techniques, employed by [malware], that use Office?"
+    path: [uses_attack_pattern, filter Office]
+    target: [Office techniques]
+  - question: "Which are techniques, used by [intrusion_set], that use Kubernetes?"
+    path: [uses_attack_pattern, filter Kubernetes]
+    target: [Kubernetes techniques]
+  - question: "Which are techniques, employed by [intrusion_set], that use ABAC policies?"
+    path: [uses_attack_pattern, filter ABAC]
+    target: [ABAC techniques]
+  - question: "Which are the attacks, used by [malware], that use Active Directories?"
+    path: [uses_attack_pattern, filter Active and Directory]
+    target: [Active Directory techniques]
+  - question: "Which are the attacks, used by [malware], that use Group Policy Objects?"
+    path: [uses_attack_pattern, filter GPO]
+    target: [Group Policy Objects techniques]
+  - question: "Which are the attacks, employed by [intrusion_set], that use MQTT?"
+    path: [uses_attack_pattern, filter MQTT]
+    target: [MQTT techniques]
+  - question: "Which are the attacks, utilized by [malware], that use Wake-on-LAN?"
+    path: [uses_attack_pattern, filter Wake-on-LAN]
+    target: [Wake-on-LAN techniques]
+  - question: "Which are the attacks, employed by [intrusion_set] that use CreatePolicyVersion API?"
+    path: [uses_attack_pattern, filter CreatePolicyVersion]
+    target: [CreatePolicyVersion API techniques]
+  - question: "Which are the attacks, used by [malware], that use AttachUserPolicy API?"
+    path: [uses_attack_pattern, filter AttachUserPolicy]
+    target: [AttachUserPolicy API techniques]
+  - question: "Which are the attacks, employed by [intrusion_set], that use net group?"
+    path: [uses_attack_pattern, filter net and group]
+    target: [net group techniques]
+  - question: "Which are the techniques used by malware, used by [intrusion_set], that use SQL Injection?"
+    path: [uses_malware, filter SQL, uses_attack_pattern]
+    target: [SQL Injection malware techniques]
+  - question: "Which are the techniques used by malware, used in [campaign], that use SQL Injection?"
+    path: [uses_malware, filter SQL, uses_attack_pattern]
+    target: [SQL Injection malware techniques]
+  multihop_no_entity:
+  - question: "How ransomware can be detected?"
+    path: [is_malware_type, filter ransomware, uses_attack_pattern, detected_by]
+    target: [ransomware detection strategies]
+  - question: "How spyware can be mitigated?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, mitigated_by]
+    target: [ransomware mitigation strategies]
+  - question: "Can you explain how RAT can be mitigated?"
+    path: [is_malware_type, filter RAT, uses_attack_pattern, mitigated_by, description]
+    target: [RAT mitigation strategies]
+  - question: "What are the target assets of RAT?"
+    path: [is_malware_type, filter RAT, uses_attack_pattern, targets]
+    target: [RAT target assets]
+  - question: Does RAT use techniques that leverage DES algorithm?
+    path: [is_malware_type, filter RAT, uses_attack_pattern, filter DES]
+    target: [checking if the techniques that leverage DES attacks are used by RAT]
+  - question: Does backdoor use techniques that leverage DDoS attacks?
+    path: [is_malware_type, filter backdoor, uses_attack_pattern, filter DDoS]
+    target: [checking if the techniques that leverage DDoS attacks are used by backdoor]
+  - question: Does ransomware use techniques that leverage SQL Injection?
+    path: [is_malware_type, filter ransomware, uses_attack_pattern, filter SQL]
+    target: [checking if the techniques that leverage SQL Injection attacks are used by ransomware]
+  - question: What are the mitigation strategies for techinques that use SQL Injection?
+    path: [is_attack_pattern_type, filter SQL, mitigated_by]
+    target: [mitigation strategies for techniques that use SQL Injection]
+  - question: What are the detection strategies for techinques that steal user's passwords?
+    path: [is_attack_pattern_type, filter password, detected_by]
+    target: [detection strategies for techniques that steal user's passwords]
+  - question: What are the techinques that steal user's passwords used by ransomware?
+    path: [is_malware_type, filter ransomware, uses_attack_pattern, filter password]
+    target: [techniques that steal user's passwords used by ransomware]
+  - question: What are the detection strategies for techinques for token manipulation used by spyware?
+    path: [is_malware_type, filter ransomware, uses_attack_pattern, filter token, detected_by]
+    target: [detection strategies for techniques for token manipulation used by spyware]
+  - question: What are the mitigation strategies that implement signatures or heuristics for techinques, that use DDoS attacks, used by RaaS?
+    path: [is_malware_type, filter RaaS, uses_attack_pattern, filter DDoS, mitigated_by, filter signatures or heuristics]
+    target: [mitigation strategies that implement signatures or heuristics for techniques that use DDoS attacks used by spyware]
+  - question: What are the mitigation strategies that implement data loss prevention (DLP) for techinques, that use cameras, used by spyware?
+    path: [is_malware_type, filter spyware, uses_attack_pattern, filter camera, mitigated_by, filter data loss prevention or (DLP)]
+    target: [mitigation strategies that implement data loss prevention (DLP) for techniques that use cameras used by spyware]
+  - question: What are mitigation that use RDP gateways?
+    path: [is_course_of_action_type, filter RDP] 
+    target: [mitigation that use RDP gateways]
+  - question: What are mitigation that use DMZ?
+    path: [is_course_of_action_type, filter DMZ] 
+    target: [mitigation that use DMZ]
+  - question: What are the techniques mitigated by strategy that inspect SSL/TLS sessions?
+    path: [is_course_of_action_type, filter SSL/TLS, mitigates] 
+    target: [techniques mitigated by strategy that inspect SSL/TLS sessions]
+  - question: What are the malware mitigated by strategy that use encryption?
+    path: [is_course_of_action_type, filter encryption, mitigates, used_by_malware] 
+    target: [malware mitigated by strategy that use encryption]
+  - question: What are the tools used malware mitigated by strategy that use seccomp-bpf?
+    path: [is_course_of_action_type, filter seccomp-bpf, mitigates, used_by_malware, uses_tool] 
+    target: [tools used by malware mitigated by strategy that use seccomp-bpf]
+  - question: What are the tools, that use SQL, used malware mitigated by strategy that use seccomp-bpf?
+    path: [is_course_of_action_type, filter seccomp-bpf, mitigates, used_by_malware, uses_tool, filter SQL] 
+    target: [tools that use SQL employed by malware mitigated by strategy that use seccomp-bpf]
+  - question: "Which are the techniques used by malware that use SQL Injection?"
+    path: [is_malware_type, filter SQL, uses_attack_pattern]
+    target: [SQL Injection malware techniques]
+  - question: "Which are the mitigation for malware that use SQL Injection?"
+    path: [is_malware_type, filter SQL, uses_attack_pattern, mitigated_by]
+    target: [SQL Injection malware mitigation strategies]
+  - question: "Which are the detection strategies for RaaS malware?"
+    path: [is_malware_type, filter RaaS, uses_attack_pattern, detected_by]
+    target: [RaaS malware detection]
+  - question: "Which are the techniques of malware that target IoT devices?"
+    path: [is_malware_type, filter IoT, uses_attack_pattern]
+    target: [IoT malware techniques]
+  - question: "Which are the mitigation strategies for malware written in .NET?"
+    path: [is_malware_type, filter .NET, uses_attack_pattern, mitigated_by]
+    target: [.NET malware mitigation]
+  - question: "Which are the mitigation strategies for malware that use VBS?"
+    path: [is_malware_type, filter VBS, uses_attack_pattern, mitigated_by]
+    target: [VBS malware mitigation]
+  - question: "Which are the techniques of malware written in .NET?"
+    path: [is_malware_type, filter .NET, uses_attack_pattern]
+    target: [.NET malware techniques]
+  - question: "Which are the techniques of malware written in C or C++?"
+    path: [is_malware_type, filter C or C++, uses_attack_pattern]
+    target: [C or C++ malware techniques]
+  - question: "Which are the techniques of malware written in python?"
+    path: [is_malware_type, filter python, uses_attack_pattern]
+    target: [python malware techniques]
+  - question: "Which are the target of in-memory malware?"
+    path: [is_malware_type, filter in-memory, uses_attack_pattern, targets]
+    target: [in-memory malware targets]
+  - question: "Which are the target of malware tailored towards ICS devices?"
+    path: [is_malware_type, filter ICS, uses_attack_pattern, targets]
+    target: [ICS malware targets]
+  - question: "Which are the target of RPC-based backdoor?"
+    path: [is_malware_type, filter RPC-based backdoor, uses_attack_pattern, targets]
+    target: [RPC-based backdoor malware targets]
+  - question: "Which are the target of malware that steal credentials?"
+    path: [is_malware_type, filter steal and credentials, uses_attack_pattern, targets]
+    target: [stealing credential malware targets]
+  - question: "Which are the platform of the techniques used by trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platform of the techniques used by worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are the platform of the techniques used by backdoor?"
+    path: [is_malware_type, filter backdoor, uses_attack_pattern, x_mitre_platforms]
+    target: [backdoor technique platform]
+  - question: "Which are the platform of the techniques of spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, x_mitre_platforms]
+    target: [spyware technique platform]
+  - question: "Which are the platform of the behaviour of trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platform of the behaviour of worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are the platform of the behaviour of backdoor?"
+    path: [is_malware_type, filter backdoor, uses_attack_pattern, x_mitre_platforms]
+    target: [backdoor technique platform]
+  - question: "Which are techniques that use token stealing?"
+    path: [is_attack_pattern_type, filter token and steal]
+    target: [token stealing techniques]
+  - question: "Which are techniques that use Office?"
+    path: [is_attack_pattern_type, filter Office]
+    target: [Office techniques]
+  - question: "Which are techniques that use Kubernetes?"
+    path: [is_attack_pattern_type, filter Kubernetes]
+    target: [Kubernetes techniques]
+  - question: "Which are techniques that use ABAC policies?"
+    path: [is_attack_pattern_type, filter ABAC]
+    target: [ABAC techniques]
+  - question: "Which are the attacks that use Active Directories?"
+    path: [is_attack_pattern_type, filter Active and Directory]
+    target: [Active Directory techniques]
+  - question: "Which are the attacks that use Group Policy Objects?"
+    path: [is_attack_pattern_type, filter GPO]
+    target: [Group Policy Objects techniques]
+  - question: "Which are the attacks that use MQTT?"
+    path: [is_attack_pattern_type, filter MQTT]
+    target: [MQTT techniques]
+  - question: "Which are the attacks that use Wake-on-LAN?"
+    path: [is_attack_pattern_type, filter Wake-on-LAN]
+    target: [Wake-on-LAN techniques]
+  - question: "Which are the attacks that use CreatePolicyVersion API?"
+    path: [is_attack_pattern_type, filter CreatePolicyVersion]
+    target: [CreatePolicyVersion API techniques]
+  - question: "Which are the attacks that use AttachUserPolicy API?"
+    path: [is_attack_pattern_type, filter AttachUserPolicy]
+    target: [AttachUserPolicy API techniques]
+  - question: "Which are the attacks that use net group?"
+    path: [is_attack_pattern_type, filter net and group]
+    target: [net group techniques]
+  single_hop_relationship_filter:
+  - question: "What are the mitigations for [malware]?"
+    path: [uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies for the malware techniques]
+  - question: "How [malware] can be detected?"
+    path: [uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the platforms of the techniques used by spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, x_mitre_platforms]
+    target: [spyware technique platform]
+  - question: "Which trojan is used by the [intrusion_set]?"
+    path: [uses_malware, filter trojan]
+    target: [trojan malware]
+  - question: "What is a spyware?"
+    path: [is_malware_type, filter spyware, description]
+    target: [spyware description]
+  - question: "What is a Ransomware?"
+    path: [is_malware_type, filter ransomware, description]
+    target: [ransomware description]
+  - question: "What is a backdoor?"
+    path: [is_malware_type, filter backdoor, description]
+    target: [backdoor description]
+  - question: "What is a worm?"
+    path: [is_malware_type, filter worm, description]
+    target: [worm description]
+  - question: "Which rootkit is used by the [intrusion_set]?"
+    path: [uses_malware, filter trojan]
+    target: [trojan malware]
+  - question: "Which stealing sofware is used by the [intrusion_set]?"
+    path: [uses_malware, filter stealing]
+    target: [stealing malware]
+  - question: "Which virus used by the [intrusion_set] is used against banks?"
+    path: [uses_malware, filter bank]
+    target: [banking malware]
+  - question: "Which ransomware is used by the [intrusion_set]?"
+    path: [uses_malware, filter ransomware]
+    target: [ransomware malware]
+  - question: "Which software is used by the [intrusion_set] to ransom their targets?"
+    path: [uses_malware, filter ransomware]
+    target: [ransomware malware]
+  - question: "Which spyware is used by the [intrusion_set]?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "Which software is used by [intrusion_set] to spy their targets?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "Which worm is used by the [intrusion_set]?"
+    path: [uses_malware, filter worm]
+    target: [worm malware]
+  - question: "Which backdoor is used by the [intrusion_set]?"
+    path: [uses_malware, filter backdoor]
+    target: [backdoor malware]
+  - question: "What trojan does [intrusion_set] make use of?"
+    path: [uses_malware, filter trojan]
+    target: [trojan malware]
+
+  - question: "Specify the rootkit used by [intrusion_set]."
+    path: [uses_malware, filter rootkit]
+    target: [rootkit malware]
+  - question: "Which software does [intrusion_set] use for data theft?"
+    path: [uses_malware, filter stealing]
+    target: [stealing malware]
+  - question: "Identify the ransomware used by [intrusion_set]."
+    path: [uses_malware, filter ransomware]
+    target: [ransomware malware]
+  - question: "Which spyware is deployed by [intrusion_set]?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "What spyware tools are linked to [intrusion_set]?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "Which worm does [intrusion_set] utilize in operations?"
+    path: [uses_malware, filter worm]
+    target: [worm malware]
+  - question: "Which backdoor software is linked to [intrusion_set]?"
+    path: [uses_malware, filter backdoor]
+    target: [backdoor malware]
+  - question: "What spy software is used by the [campaign]?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "What RAT software is used by the [campaign]?"
+    path: [uses_malware, filter RAT]
+    target: [RAT malware]
+  - question: "What software used by the [campaign] targeted banks?"
+    path: [uses_malware, filter bank]
+    target: [banking malware]
+  - question: "What replicating virus is used by the [campaign]?"
+    path: [uses_malware, filter worm]
+    target: [worm malware]
+  - question: "Which rootkit is used by the [campaign]?"
+    path: [uses_malware, filter rootkit]
+    target: [rootkit malware]
+  - question: "Which rootkit or worm is used by the [campaign]?"
+    path: [uses_malware, filter rootkit or worm]
+    target: [rootkit or worm malware]
+  - question: "Which rootkit or ransomware is used by the [campaign]?"
+    path: [uses_malware, filter rootkit or ransomware]
+    target: [rootkit or ransomware malware]
+  - question: "Which rootkit or spyware is used by the [campaign]?"
+    path: [uses_malware, filter rootkit or spyware]
+    target: [rootkit or spyware malware]
+  - question: "Which spyware or ransomware is used by the [campaign]?"
+    path: [uses_malware, filter ransomware or spyware]
+    target: [spyware or ransomware malware]
+  - question: "Which backdoor or ransomware is used by the [campaign]?"
+    path: [uses_malware, filter ransomware or backdoor]
+    target: [backdoor or ransomware malware]
+  - question: "Which spyware or backdoor is used by the [campaign]?"
+    path: [uses_malware, filter backdoor or spyware]
+    target: [backdoor or spyware malware]
+  - question: "Which spyware or worm is used by the [campaign]?"
+    path: [uses_malware, filter worm or spyware]
+    target: [worm or spyware malware]
+  - question: "Which backdoor or worm is used by the [campaign]?"
+    path: [uses_malware, filter worm or backdoor]
+    target: [worm or backdoor malware]
+  - question: "Which rootkit or worm is used by the [campaign]?"
+    path: [uses_malware, filter rootkit or worm]
+    target: [rootkit or worm malware]
+  - question: "Identify the ransomware employed by [campaign]."
+    path: [uses_malware, filter ransomware]
+    target: [ransomware malware]
+  - question: "What spy software does the [campaign] use?"
+    path: [uses_malware, filter spyware]
+    target: [spyware malware]
+  - question: "Which RAT software is used by [campaign]?"
+    path: [uses_malware, filter RAT]
+    target: [RAT malware]
+  - question: "What remote access trojan is used by the [campaign]?"
+    path: [uses_malware, filter RAT]
+    target: [RAT malware]
+  - question: "What worm or replicating virus is used by [campaign]?"
+    path: [uses_malware, filter worm]
+    target: [worm malware]
+  - question: "Which rootkit is deployed by the [campaign]?"
+    path: [uses_malware, filter rootkit]
+    target: [rootkit malware]
+  - question: "What rootkit or worm is utilized by [campaign]?"
+    path: [uses_malware, filter rootkit or worm]
+    target: [rootkit or worm malware]
+  - question: "Identify the rootkit or worm linked to [campaign]."
+    path: [uses_malware, filter rootkit or worm]
+    target: [rootkit or worm malware]
+  - question: "Which rootkit and worm software is tied to the [campaign]?"
+    path: [uses_malware, filter rootkit and worm]
+    target: [rootkit and worm malware]
+  - question: "Which rootkit or ransomware is associated with [campaign]?"
+    path: [uses_malware, filter rootkit or ransomware]
+    target: [rootkit or ransomware malware]
+  - question: "What rootkit or spyware is connected to [campaign]?"
+    path: [uses_malware, filter rootkit or spyware]
+    target: [rootkit or spyware malware]
+  - question: "Which ransomware or spyware does [campaign] utilize?"
+    path: [uses_malware, filter ransomware or spyware]
+    target: [spyware or ransomware malware]
+  - question: "What backdoor or ransomware is deployed by [campaign]?"
+    path: [uses_malware, filter ransomware or backdoor]
+    target: [backdoor or ransomware malware]
+  - question: "What worm or spyware does [campaign] use?"
+    path: [uses_malware, filter worm or spyware]
+    target: [worm or spyware malware]
+  - question: "Which backdoor or worm is employed by [campaign]?"
+    path: [uses_malware, filter worm or backdoor]
+    target: [worm or backdoor malware]
+  - question: "Which ransomware or worm is used by the [campaign]?"
+    path: [uses_malware, filter worm or ransomware]
+    target: [worm or ransomware malware]
+  - question: "Which rootkit or ransomware is used by the [intrusion_set]?"
+    path: [uses_malware, filter rootkit or ransomware]
+    target: [rootkit or ransomware malware]
+  - question: "Which rootkit or spyware is used by the [intrusion_set]?"
+    path: [uses_malware, filter rootkit or spyware]
+    target: [rootkit or spyware malware]
+  - question: "Which spyware or ransomware is used by the [intrusion_set]?"
+    path: [uses_malware, filter ransomware or spyware]
+    target: [spyware or ransomware malware]
+  - question: "Which backdoor or ransomware is used by the [intrusion_set]?"
+    path: [uses_malware, filter ransomware or backdoor]
+    target: [backdoor or ransomware malware]
+  - question: "Which spyware or backdoor is used by the [intrusion_set]?"
+    path: [uses_malware, filter backdoor or spyware]
+    target: [backdoor or spyware malware]
+  - question: "Which spyware or worm is used by the [intrusion_set]?"
+    path: [uses_malware, filter worm  or spyware]
+    target: [worm or spyware malware]
+  - question: "Which backdoor or worm is used by the [intrusion_set]?"
+    path: [uses_malware, filter worm or backdoor]
+    target: [backdoor or worm malware]
+  - question: "Which ransomware or worm is used by the [intrusion_set]?"
+    path: [uses_malware, filter worm or ransomware]
+    target: [worm or ransomware malware]
+  - question: "List the techniques employed by [intrusion_set]."
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What are relevant behaviors [malware] executes?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "Identify the behaviors linked to [malware]."
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the key attack techniques the [malware] employs?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "List the methods associated with [campaign]."
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by [tool]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the attack patterns associated with [malware]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "Identify the  method the [tool] leverages."
+    path: [uses_attack_pattern]
+    target: [technique names]
+  single_hop_not_filter:
+  - question: "What are the mitigations for [attack_pattern]?"
+    path: [mitigated_by]
+    target: [technique mitigation strategies]
+  - question: "Which technique is used by the [intrusion_set]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What behavior does the [malware] use?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "Which method has been used by the [campaign]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What technique does the [tool] use?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What behavior is utilized by the [intrusion_set]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "What virus is employed by the [campaign]?"
+    path: [uses_malware]
+    target: [malware names]
+  - question: "What technique is detected by the [x_mitre_data_component]?"
+    path: [detects]
+    target: [technique names]
+  - question: "Which attack pattern is identified by the [x_mitre_data_component]?"
+    path: [detects]
+    target: [technique names]
+  - question: "What behavior is recognized by the [x_mitre_data_component]?"
+    path: [detects]
+    target: [technique names]
+  - question: "What technique is mitigated by the [course_of_action]?"
+    path: [mitigates]
+    target: [technique names]
+  - question: "What system is targeted by the [attack_pattern]?"
+    path: [targets]
+    target: [target names]
+  - question: "Which infrastructure is the [attack_pattern] directed at?"
+    path: [targets]
+    target: [target names]
+  - question: "Which software is used by the [malware]?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "What utility is used by the [campaign]?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "Which framework is used by the [intrusion_set]?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "What software is employed by the [malware]?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "Which utility does the [campaign] utilize?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "What framework is employed by the [intrusion_set]?"
+    path: [uses_tool]
+    target: [tool names]
+  - question: "Which group is the cause of [campaign]?"
+    path: [attributed_to]
+    target: [group names]
+  - question: "What threat actor is responsible for the [campaign]?"
+    path: [attributed_to]
+    target: [group names]
+  - question: "Which are the target domains of techniques used by the [intrusion_set]?"
+    path: [uses_attack_pattern, x_mitre_domains]
+    target: [technique domains]
+  - question: "What are the data sources of [intrusion_set]'s attacks?"
+    path: [uses_attack_pattern, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "Which are the target platforms of techniques used by the [intrusion_set]?"
+    path: [uses_attack_pattern, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "Which are the objectives of techniques used by the [intrusion_set]?"
+    path: [uses_attack_pattern, x_mitre_tactic_type]
+    target: [technique tactic]
+  - question: "Which are the kill chain phases of techniques used by the [intrusion_set]?"
+    path: [uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "Which defenses do techniques used by the [intrusion_set] bypass?"
+    path: [uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "How techniques used by the [intrusion_set] can be detected?"
+    path: [uses_attack_pattern, x_mitre_detection]
+    target: [technique detection strategies]
+  - question: "What are the objectives of [malware]?"
+    path: [uses_attack_pattern, x_mitre_tactic_type]
+    target: [technique tactic]
+  - question: "What are the kill chain phases of [malware]'s behaviors?"
+    path: [uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the data sources of [malware]'s behaviors?"
+    path: [uses_attack_pattern, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "How techniques used by the [malware] can be detected?"
+    path: [uses_attack_pattern, x_mitre_detection]
+    target: [technique detection strategies]
+  - question: "Which defenses do techniques used by the [malware] bypass?"
+    path: [uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which method has been used in the [campaign]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: "Which defense measure has been bypassed in the [campaign]?"
+    path: [uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which was the target platform in the [campaign]?"
+    path: [uses_attack_pattern, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "Which was the target domain in the [campaign]?"
+    path: [uses_attack_pattern, x_mitre_domains]
+    target: [technique domains]
+  - question: "Which kind of defence [tool] can bypass?"
+    path: [uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which is the platform where [tool] is operative?"
+    path: [uses_attack_pattern, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "Which is the domains where [tool] is operative?"
+    path: [uses_attack_pattern, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "Which are the platforms targeted by the viruses used by the [intrusion_set]?"
+    path: [uses_malware, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "Which are the domains targeted by the viruses used by the [intrusion_set]?"
+    path: [uses_malware, x_mitre_domains]
+    target: [technique domains]
+  - question: "What are the target platforms of malicious software used in the [campaign]?"
+    path: [uses_malware, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "What are the target domains of malicious software used in the [campaign]?"
+    path: [uses_malware, x_mitre_domains]
+    target: [technique domains]
+  - question: "What are the target platform of technique detected by the [x_mitre_data_component]?"
+    path: [detects, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "What are the target domains of technique detected by the [x_mitre_data_component]?"
+    path: [detects, x_mitre_domains]
+    target: [technique domains]
+  - question: "What are the measures bypassed by techniques detected by the [x_mitre_data_component]?"
+    path: [detects, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "What are the data sources of the techniques detected by the [x_mitre_data_component]?"
+    path: [detects, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "What are the kill chain phases of the techniques detected by the [x_mitre_data_component]?"
+    path: [detects, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the target platform of techniques mitigated by [course_of_action]?"
+    path: [mitigates, x_mitre_platforms]
+    target: [technique platforms]
+  - question: "What are the target domains of techniques mitigated by [course_of_action]?"
+    path: [mitigates, x_mitre_domains]
+    target: [technique domains]
+  - question: "What are the measures bypassed by techniques mitigates by the [course_of_action]?"
+    path: [mitigates, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "What are the data sources of the techniques mitigates by the [course_of_action]?"
+    path: [mitigates, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "What are the kill chain phases of the techniques mitigates by the [course_of_action]?"
+    path: [mitigates, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "Which the target platforms of the software used by the [malware]?"
+    path: [uses_tool, x_mitre_platforms]
+    target: [tool platforms]
+  - question: "Which the target domains of the software used by the [malware]?"
+    path: [uses_tool, x_mitre_domains]
+    target: [tool domains]
+  - question: "What is the target platform of the utility used by the [campaign]?"
+    path: [uses_tool, x_mitre_platforms]
+    target: [tool platforms]
+  - question: "What is the target domain of the utility used by the [campaign]?"
+    path: [uses_tool, x_mitre_domains]
+    target: [tool domains]
+  - question: "Which is the target platform of the framework used by the [intrusion_set]?"
+    path: [uses_tool, x_mitre_platforms]
+    target: [tool platforms]
+  - question: "Which is the target platform of the framework used by the [malware]?"
+    path: [uses_tool, x_mitre_platforms]
+    target: [tool platforms]
+  - question: "Which is the target domain of the framework used by the [malware]?"
+    path: [uses_tool, x_mitre_domains]
+    target: [tool domains]
+
+  multi_hop_relationship:
+  - question: "Which are the platforms of the techniques used by trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platforms of the techniques used by worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are the platforms of the techniques used by backdoor?"
+    path: [is_malware_type, filter backdoor, uses_attack_pattern, x_mitre_platforms]
+    target: [backdoor technique platform]
+  - question: "Which are the platforms of the techniques of spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, x_mitre_platforms]
+    target: [spyware technique platform]
+  - question: "Which are the platforms of the behaviour of trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern, x_mitre_platforms]
+    target: [trojan technique platform]
+  - question: "Which are the platforms of the behaviour of worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern, x_mitre_platforms]
+    target: [worm technique platform]
+  - question: "Which are the platforms of the behaviour of backdoor?"
+    path: [is_malware_type, filter backdoor, uses_attack_pattern, x_mitre_platforms]
+    target: [backdoor technique platform]
+  - question: What are the mitigations strategies to adopt for the tools used by malware involved in campaign of [intrusion_set]?
+    path: [is_responsible, uses_malware, uses_tool, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies for malware used by the group]
+  - question: What are the mitigations strategies to adopt for the tools used by malware involved in campaign of [campaign]?
+    path: [uses_malware, uses_tool, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies for malware used by the group]
+  - question: "Which are the attack's domains used by tools that the [malware] uses?"
+    path: [uses_tool, uses_attack_pattern, x_mitre_domains]
+    target: [technique target domain]
+  - question: "Which are the attack's platforms used by relevant tools that the malware involved in the [campaign]?"
+    path: [uses_malware, uses_tool, uses_attack_pattern, x_mitre_platforms]
+    target: [technique target platforms]
+  - question: "Which are the data sources of techniques used by tools used by malware involved in the campaigns attributed to [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_tool, uses_attack_pattern, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "Which are the kill chain phased of the patterns used by relevant tools that the malware used by groups involved in the [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool, uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "Which are the defenses bypassed by techniques used by malware employed in [campaign]?"
+    path: [uses_malware, uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which is the impact of the attacks used by malware used by groups involved in [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, x_mitre_impact_type]
+    target: [technique impact]
+  - question: "Which system requirements is required by malware employed in campaigns attributed to [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, x_mitre_system_requirements]
+    target: [technique system requirements]
+  - question: "Which are the domains of the tools that use SQL Injection that have been used by malware employed in the [campaign]?"
+    path: [uses_malware, uses_tool, filter SQL, x_mitre_domains]
+    target: [tools domains]
+  - question: "Which are the platforms of the tools that have been used by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_tool, x_mitre_platforms]
+    target: [tool platforms]
+  - question: "Which are the aliases of the token manipulation malware have been exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, filter token, x_mitre_aliases]
+    target: [malware aliases]
+  - question: "Which are the domains of the DDoS attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, filter DDoS, x_mitre_domains]
+    target: [technique domains]
+  - question: "Which are the domains of the main detection strategies for the behaviors of the malware exploited by the iranian group responsible for [campaign]?"
+    path: [attributed_to, filter iran, uses_malware, uses_attack_pattern, detected_by, x_mitre_domains]
+    target: [detection strategy domains]
+  - question: "Which are the domains of the remediation needed for the methods employed by [malware]?"
+    path: [uses_attack_pattern, detected_by, x_mitre_domains]
+    target: [detection strategies domain]
+  - question: "Which attack pattern is used by the tool that [malware] uses?"
+    path: [uses_tool, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by the tools of the malware involved in the [campaign]?"
+    path: [uses_malware, uses_tool, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by the tools used by malware involved in the campaigns attributed to [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_tool, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by the tools that the malware used by russian groups involved in the [campaign]?"
+    path: [attributed_to, filter russia, uses_malware, uses_tool, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by malware employed in [campaign]?"
+    path: [uses_malware, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by malware used by chinese groups involved in [campaign]?"
+    path: [attributed_to, filter china or chinese, uses_malware, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is used by malware employed in american campaigns attributed to [intrusion_set]?"
+    path: [is_responsible, filter america, uses_malware, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attacks target the assets affected by the [malware]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which attacks target the important assets affected by [intrusion_set]?"
+    path: [uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which are the assets targeted by attacks done by [intrusion_set]?"
+    path: [uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which are the assets targeted by attacks done by [malware]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which are the tools have been used by malware employed in the [campaign]?"
+    path: [uses_malware, uses_tool]
+    target: [tool names]
+  - question: "Which are the tools have been used by malware, affecting BLU Products, employed in the campaigns attributed to [intrusion_set]?"
+    path: [is_responsible, uses_malware, filter BLU, uses_tool]
+    target: [tool names]
+  - question: "Which tool have been used by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_tool]
+    target: [tool names]
+  - question: "Which tool have been used by malware exploited by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool]
+    target: [tool names]
+  - question: "Which are the target of the tool used by malware exploited by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool, uses_attack_pattern, targets]
+    target: [asset names]
+  - question: "Which are the defense bypassed of the tool used by malware exploited by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool, uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which are the defense bypassed by the tools used by malware exploited the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool, uses_attack_pattern, x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "What important asset is targeted by attacks used by the [malware]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What important asset is targeted by attacks used by malware used by [intrusion_set]?"
+    path: [uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What important asset is targeted by attacks used by malware used by groups responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What important asset is targeted by attacks used by malware used in campaign caused by [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What are the kill chain phases of the used by malware used in campaign caused by [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the impacts of the attacks used by malware used in campaign caused by [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, x_mitre_impact_type]
+    target: [technique impact type]
+  - question: "What important asset is targeted by the attacks used by malware exploited in campaign attributed to [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What asset is targeted by the main techniques used by the [intrusion_set]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "What asset is targeted by techniques used by the malware exploited by groups involved in [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which are the malware have been exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware]
+    target: [malware names]
+  - question: "Which are the main attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which are the detection strategies for the behaviors of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the detection operations for the behaviors of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the mitigation strategies for the attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which are the mitigation options for the attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which are the mitigation actions for the attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which are the mitigation operations for the attacks of the malware exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which are the remediations needed for the methods employed by [malware]?"
+    path: [uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the detection strategies needed for the methods employed by malware used by [intrusion_set]?"
+    path: [uses_malware, uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the detection actions needed for the methods employed by malware used by [intrusion_set]?"
+    path: [uses_malware, uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the remediations needed for the methods employed by malware employed by groups involved in [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are important remediations needed for the methods employed by [tool]?"
+    path: [uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the remediations needed for the methods employed by [intrusion_set]?"
+    path: [uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the necessary options to detect methods employed by [intrusion_set]?"
+    path: [uses_attack_pattern, detected_by]
+    target: [detection strategies]
+  - question: "Which are the necessary options to mitigate methods employed by [intrusion_set]?"
+    path: [uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which important strategy mitigates the attack related to [malware]?"
+    path: [uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which strategy mitigates the attack related to the malware used in [campaign]?"
+    path: [uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which strategy mitigates the attacks related to the malware used in campaigns of [intrusion_set]?"
+    path: [is_responsible, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which are the mitigations needed for the methods employed by malware employed by groups involved in [campaign]?"
+    path: [attributed_to, uses_malware, uses_attack_pattern, mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which attack pattern is used by the tool that the [malware] uses?"
+    path: [uses_tool, uses_attack_pattern]
+    target: [technique names]
+  - question: "Which attack pattern is targeted by the asset affected by the [malware]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which tools have been used by Bot malware employed in the [campaign]?"
+    path: [uses_malware, filter bot, uses_tool]
+    target: [tool names]
+  - question: "What tools have been used by the group that caused the operation [campaign]?"
+    path: [attributed_to, uses_tool]
+    target: [tool names]
+  - question: "What asset is targeted by the attack pattern, using PowerShell scripts, used by the [malware]?"
+    path: [uses_attack_pattern, filter PowerShell, targets]
+    target: [target names]
+  - question: "What asset is targeted by the attack pattern used by the [intrusion_set]?"
+    path: [uses_attack_pattern, targets]
+    target: [target names]
+  - question: "Which malware have been exploited by the group responsible for [campaign]?"
+    path: [attributed_to, uses_malware]
+    target: [malware names]
+  - question: "Which remediation is needed for the methods employed by [malware]?"
+    path: [uses_attack_pattern, detects]
+    target: [detection strategies]
+  - question: "Which remediation is needed for the methods employed by [intrusion_set]?"
+    path: [uses_attack_pattern, detects]  
+    target: [detection strategies]
+  - question: "Which strategy mitigates [attack_pattern]?"
+    path: [mitigated_by]
+    target: [mitigation strategies]
+  - question: "Which attack pattern is mitigated by the course of action, operating on Windows Registers, associated with the [malware]?"
+    path: [uses_attack_pattern, mitigates, filter Windows and Regist]
+    target: [mitigation strategies]
+  - question: "What are the techniques used by adware?"
+    path: [is_malware_type, filter adware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by wiper?"
+    path: [is_malware_type, filter wiper, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the main techniques used by riskware?"
+    path: [is_malware_type, filter riskware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by malware that steal bank accounts?"
+    path: [is_malware_type, filter steal and banking, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by loader malware?"
+    path: [is_malware_type, filter loader, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by loader malware used by [instrusion-set]?"
+    path: [uses_malware, filter loader, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are popular behaviors of modular backdoor?"
+    path: [is_malware_type, filter modular and backdoor, uses_attack_pattern]
+    target: [technique names]
+  - question: What is a ransomware?
+    path: [description, filter ransomware]
+    target: [ransomware description]
+  - question: What is a spyware?
+    path: [description, filter spyware]
+    target: [spyware description]
+  - question: What is a backdoor?
+    path: [description, filter backdoor]
+    target: [backdoor description]
+  - question: What is a worm?
+    path: [description, filter worm]
+    target: [worm description]
+  - question: Is [attack_pattern] used by ransomware? 
+    path: [used_by_malware, description, filter ransomware]
+    target: [checking if the behavior belong to ransomware]
+  - question: Is [attack_pattern] used by spyware?
+    path: [used_by_malware, description, filter spyware]
+    target: [checking if the behavior belong to spyware]
+  - question: Is [attack_pattern] used by backdoor?
+    path: [used_by_malware, description, filter backdoor]
+    target: [checking if the behavior belong to backdoor]
+  - question: Is [attack_pattern] used by worm?
+    path: [used_by_malware, description, filter worm]
+    target: [checking if the behavior belong to worm]
+  - question: Is [malware] a worm?
+    path: [description, filter worm]
+    target: [checking if malware belong to worm]
+  - question: Is [malware] a spyware?
+    path: [description, filter spyware]
+    target: [checking if malware belong to spyware]
+  - question: Is [malware] a ransomware?
+    path: [description, filter ransomware]
+    target: [checking if malware belong to ransomware]
+  - question: Is [malware] a backdoor?
+    path: [description, filter backdoor]
+    target: [checking if malware belong to backdoor]
+  - question: Does [course_of_action] mitigate worm?
+    path: [mitigates, used_by_malware, description, filter worm]
+    target: [checking if the mitigations mitigates worm]
+  - question: Does [course_of_action] mitigate spyware?
+    path: [mitigates, used_by_malware, description, filter spyware]
+    target: [checking if the mitigations mitigates spyware]
+  - question: Does [course_of_action] mitigate ransomware?
+    path: [mitigates, used_by_malware, description, filter ransomware]
+    target: [checking if the mitigations mitigates ransomware]
+  - question: Does [course_of_action] mitigate backdoor?
+    path: [mitigates, used_by_malware, description, filter backdoor]
+    target: [checking if the mitigations mitigates backdoor]
+  - question: Does [course_of_action] mitigate trojan?
+    path: [mitigates, used_by_malware, description, filter trojan]
+    target: [checking if the mitigations mitigates trojan]
+  - question: What are the campaigns related to [malware]?
+    path: [used_by_campaign]
+    target: [campaign name]
+  - question: Give me the campaigns related to [malware].
+    path: [used_by_campaign]
+    target: [campaign name]
+  - question: "What are impacts of the behaviors of modular backdoor involved in campaign of [intrusion_set]?"
+    path: [is_responsible, uses_malware, filter modular and backdoor, uses_attack_pattern, x_mitre_impact_type]
+    target: [technique impacts]
+  - question: "What are the behaviors of multi-stage malware?"
+    path: [is_malware_type, filter multi-stage, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the kill chain phases of the behaviors of the tools used by multi-stage malware of groups involved in [campaign]?"
+    path: [attributed_to, uses_malware, uses_tool, filter multi-stage, uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the DDoS techniques used by botnet?"
+    path: [is_malware_type, filter botnet, uses_attack_pattern, filter DDoS]
+    target: [technique names]
+  - question: "What are techniques, using VNC, used by Spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, filter VNC]
+    target: [technique names using VNC used by spware]
+  - question: "What are the techniques, using CreateRemoteThread, used by ransomware?"
+    path: [is_malware_type, filter ransomware, uses_attack_pattern, filter CreateRemoteThread]
+    target: [technique names using CreateRemoteThread used by ransomware]
+  - question: "What are the techniques used by ransomware used by [intrusion_set]?"
+    path: [uses_malware, filter ransomware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by spyware used by [intrusion_set]?"
+    path: [uses_malware, filter spyware, uses_attack_pattern]
+    target: [technique names]
+  - question: "Tell me the techniques used by worm used by [intrusion_set]?"
+    path: [uses_malware, filter worm, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by spyware used by groups involved in [compaign]?"
+    path: [attributed_to, uses_malware, filter spyware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the kill chain phases of the techniques used by ransomware used by groups involved in [compaign]?"
+    path: [attributed_to, uses_malware, filter ransomware, uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the kill chain phases of the techniques used by stealing malware used by groups involved in [compaign]?"
+    path: [attributed_to, uses_malware, filter stealing, uses_attack_pattern, kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "What are the behaviors used by trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by adware?"
+    path: [is_malware_type, filter adware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by wiper?"
+    path: [is_malware_type, filter wiper, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by riskware?"
+    path: [is_malware_type, filter riskware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by loader malware?"
+    path: [is_malware_type, filter loader, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by modular backdoor?"
+    path: [is_malware_type, filter modular and backdoor, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by multi-stage malware?"
+    path: [is_malware_type, filter multi-stage, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by botnet?"
+    path: [is_malware_type, filter botnet, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by Spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by ransomware?"
+    path: [is_malware_type, filter ransomware, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by trojan?"
+    path: [is_malware_type, filter trojan, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by worm?"
+    path: [is_malware_type, filter worm, uses_attack_pattern]
+    target: [technique names]
+  - question: "What are the techniques used by [malware]?"
+    path: [uses_attack_pattern]
+    target: [technique names]
+  - question: Which method has been used in the [campaign]? Can you explain what is this attack?
+    path: [uses_attack_pattern, description]
+    target: [technique description]
+  - question: Which are the data sources of [intrusion_set]'s attacks? Can you also explain these data sources?
+    path: [uses_attack_pattern, x_mitre_data_sources]
+    target: [technique description]
+  - question: Which are the objectives of techniques used by the [intrusion_set]? Can you explain these tactics?
+    path: [uses_attack_pattern, x_mitre_tactic_type]
+    target: [technique tactics]
+  - question: Which are the objectives of [malware] and what are these objectives?
+    path: [uses_attack_pattern, x_mitre_tactic_type]
+    target: [technique tactics]
+  - question:  Which are the data sources of [malware]'s behaviors and what are these data sources?
+    path: [uses_attack_pattern, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: Which technique does the [tool] use and what is this technique?
+    path: [uses_attack_pattern, description]
+    target: [technique description]
+  - question: Which are the data sources of the techniques detected by the [x_mitre_data_component] and what are these data sources?
+    path: [detects, x_mitre_data_sources]
+    target: [technique data sources]
+  - question: What are the data sources of the techniques mitigates by the [course_of_action]? Can you also explain these data sources?
+    path: [mitigates, x_mitre_data_sources]
+    target: [technique data sources]
+  - question:  What is [attack_pattern]?
+    path: [description]
+    target: [technique description]
+  intra_relationship:
+  - question : "What is the target domain of [malware]?"
+    path: [x_mitre_domains]
+    target: [malware domain]
+  - question : "What is a [malware]?"
+    path: [description]
+    target: [malware description]
+  - question: "What are the aliases of [malware]?"
+    path: [x_mitre_aliases]
+    target: [malware aliases]
+  - question: Is [malware] a family?
+    path: [is_family]
+    target: [malware family]
+  - question: "Provide a description for [malware]."
+    path: [description]
+    target: [malware description]
+  - question: "What are the system requirements for the technique [attack_pattern]?"
+    path: [x_mitre_system_requirements]
+    target: [technique system requirements]
+  - question: "What are the network requirements for [attack_pattern]?"
+    path: [x_mitre_network_requirements]
+    target: [technique network requirements]
+  - question: "What is the objective of [attack_pattern]?"
+    path: [x_mitre_tactic_type]
+    target: [technique tactic]
+  - question: "How [attack_pattern] can be detected?"
+    path: [x_mitre_detection]
+    target: [technique detection strategies]
+  - question: "What are the kill chain phases of [attack_pattern]?"
+    path: [kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "List the system requirements for [attack_pattern]."
+    path: [x_mitre_system_requirements]
+    target: [technique system requirements]
+  - question: "Provide the network requirements for [attack_pattern]."
+    path: [x_mitre_network_requirements]
+    target: [technique network requirements]
+  - question: "Detection methods for [attack_pattern]."
+    path: [x_mitre_detection]
+    target: [technique detection strategies]
+  - question: "List the kill chain phases for [attack_pattern]."
+    path: [kill_chain_phases]
+    target: [technique kill chain phases]
+  - question: "How adversaries can use [attack_pattern]?"
+    path: [description]
+    target: [technique description]
+  - question: "Which permissions [attack_pattern] requires?"
+    path: [x_mitre_permissions_required]
+    target: [technique permission requirements]
+  - question: "What are the defenses that [attack_pattern] is able to bypass?"
+    path: [x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which kind of impact does [attack_pattern] have?"
+    path: [x_mitre_impact_type]
+    target: [technique impact]
+  - question: "Which platform is [attack_pattern] designed for?"
+    path: [x_mitre_platforms]
+    target: [technique platform]
+  - question: "Which domain [attack_pattern] is designed for?"
+    path: [x_mitre_domains]
+    target: [technique domain]
+  - question: "Which data sources [attack_pattern] is designed for?"
+    path: [x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "Explain how adversaries leverage [attack_pattern]."
+    path: [description]
+    target: [technique description]
+  - question: "Identify permissions required for [attack_pattern]."
+    path: [x_mitre_permissions_required]
+    target: [technique permission requirements]
+  - question: "Identify defense mechanisms bypassed by [attack_pattern]."
+    path: [x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "How does [attack_pattern] evade defenses?"
+    path: [x_mitre_defense_bypassed]
+    target: [technique defense bypassed]
+  - question: "Which data sources support [attack_pattern]?"
+    path: [x_mitre_data_sources]
+    target: [technique data sources]
+  - question: "What is [course_of_action]?"
+    path: [description]
+    target: [Course of Action description]
+  - question: "What is [intrusion_set]?"
+    path: [description]
+    target: [Instrusion Set description]
+  - question: "What are the aliases of the group [intrusion_set]?"
+    path: [aliases]
+    target: [Instrusion Set aliases]
+  - question: "Describe the group [intrusion_set]."
+    path: [description]
+    target: [Instrusion Set description]
+  - question: "What is [campaign]?"
+    path: [description]
+    target: [campaign description]
+  - question: "When was the first time [campaign] appeared?"
+    path: [first_seen]
+    target: [campaign first seen date]
+  - question: "When was the last time [campaign] appeared?"
+    path: [last_seen]
+    target: [campaign last seen date]
+  - question: "When was the first time [campaign] was cited?"
+    path: [x_mitre_first_seen_citation]
+    target: [campaign first citation date]
+  - question: "When was the last time [campaign] was cited?"
+    path: [x_mitre_last_seen_citation]
+    target: [campaign last citation date]
+  - question: "When did [campaign] first emerge?"
+    path: [first_seen]
+    target: [campaign first seen date]
+  - question: "When was [campaign] last active?"
+    path: [last_seen]
+    target: [campaign last seen date]
+  - question: "When was [campaign] first cited?"
+    path: [x_mitre_first_seen_citation]
+    target: [campaign first citation date]
+  - question: "When was [campaign] last cited?"
+    path: [x_mitre_last_seen_citation]
+    target: [campaign last citation date]
+  - question : "What is the target domain of [x_mitre_data_component]?"
+    path: [x_mitre_domains]
+    target: [data component domain]
+  - question : "What is a [x_mitre_data_component]?"
+    path: [description]
+    target: [data component description]
+  - question: "Identify the target domain for [x_mitre_data_component]."
+    path: [x_mitre_domains]
+    target: [data component domain]
+  - question: "Provide an overview of [x_mitre_data_component]."
+    path: [description]
+    target: [data component description]
+  - question : "What is the target domain of [x-mitre-data-source]?"
+    path: [x_mitre_domains]
+    target: [data source domain]
+  - question : "What is a [x-mitre-data-source]?"
+    path: [description]
+    target: [data source description]
+  - question : "What is the target platform of [x-mitre-data-source]?"
+    path: [x_mitre_platforms]
+    target: [data source platforms]
+  - question : "What are the collection layers of [x-mitre-data-source]?"
+    path: [x_mitre_collection_layers]
+    target: [data source collecton layers]
+  - question: "Describe [x-mitre-data-source] and its function."
+    path: [description]
+    target: [data source description]
+  - question: "What are the layers used for collecting [x-mitre-data-source]?"
+    path: [x_mitre_collection_layers]
+    target: [data source collection layers]
+  - question: "List the collection layers associated with [x-mitre-data-source]."
+    path: [x_mitre_collection_layers]
+    target: [data source collection layers]
+  - question : "What is the target domain of [tool]?"
+    path: [x_mitre_domains]
+    target: [tool domain]
+  - question : "What is [tool]?"
+    path: [description]
+    target: [tool description]
+  - question : "What is the target platform of [tool]?"
+    path: [x_mitre_platforms]
+    target: [tool platforms]
+  
+  multi_with_more_filter:
+  - question: Can the '[x_mitre_data_component]' detect techniques that use SQL?
+    path: [is_attack_pattern_type, filter SQL, detected_by]
+    target: [checking if the attack pattern that use SQL can be detected by the detection strategy]
+  - question: Can [course_of_action] mitigate DDoS attacks?
+    path: [is_attack_pattern_type, filter DDoS, mitigated_by]
+    target: [checking if the attack pattern that use DDoS can be mitigated by the course of action] 
+  - question: Has ransomware been used in campaign carried out by [intrusion_set]?
+    path: [is_responsible, uses_malware, filter ransomware]
+    target: [checking if ransomware are involved in campaign carried out by the group]
+  - question: Has spyware been used in campaign carried out by [intrusion_set]? If yes, what are its behaviors?
+    path: [is_responsible, uses_malware, filter spyware, uses_attack_pattern]
+    target: [checking if spyware are involved in campaign carried out by the group and if yes retrieve its attack pattern]
+  - question: Is worm involved in [campaign]?
+    path: [uses_malware, filter worm]   
+    target: [checking if worm are involved in campaign]
+
+  other_double_entity:
+  - question: Is [attack_pattern] used by [malware]?
+    path: [uses_attack_pattern]
+    target: [checking if the technique is used by malware]
+  - question: Does [malware] use [attack_pattern]?
+    path: [uses_attack_pattern]
+    target: [checking if the technique is used by malware]
+  - question: Is [x_mitre_asset] targeted by [attack_pattern]?
+    path: [targets]
+    target: [checking if the attack pattern targets the asset]
+  - question: Can the '[x_mitre_data_component]' detect the action '[attack_pattern]'?
+    path: [detected_by]
+    target: [checking if the attack pattern can be detected by the detection strategy]
+  - question: Can [course_of_action] mitigate the attack '[attack_pattern]'?
+    path: [mitigated_by]
+    target: [checking if the attack pattern can be mitigated by the course of action]  
+  - question: Can [course_of_action] mitigate [malware]?
+    path: [uses_attack_pattern, mitigated_by]
+    target: [checking if the malware can be mitigated by the course of action] 
+  - question: Can [x_mitre_data_component] detect [malware]?
+    path: [uses_attack_pattern, detected_by]
+    target: [checking if the malware can be mitigated by the detection strategy]
+  - question: Is [malware] involved in [campaign]?
+    path: [uses_malware]   
+    target: [checking if the malware is involved in campaign]
+  - question: Has [malware] been used in campaign carried out by [intrusion_set]?
+    path: [is_responsible, uses_malware]
+    target: [checking if the malware is involved in campaign carried out by the group]
+  - question: Has [malware] been used in campaign carried out by [intrusion_set]? If yes, what are its behaviors?
+    path: [is_responsible, uses_malware, uses_attack_pattern]
+    target: [checking if the malware is involved in campaign carried out by the group and if yes retrieve its attack pattern]
+  double_entity:
+  - question: "Is [malware] a backdoor? Does it use [attack_pattern]?"
+    path: [used_by_malware, description, filter backdoor]
+    target: [checking if the malware is a backdoor and uses the technique]
+  - question: "Is [malware] a ransomware? Does it use [attack_pattern]?"
+    path: [used_by_malware, description, filter ransomware]
+    target: [checking if the malware is a ransomware and uses the technique]
+  - question: "Is [malware] a spyware? Does it use [attack_pattern]?"
+    path: [used_by_malware, description, filter spyware]
+    target: [checking if the malware is a spyware and uses the technique]
+  - question: "Is [malware] a worm? Does it use [attack_pattern]?"
+    path: [used_by_malware, description, filter worm]
+    target: [checking if the malware is a worm and uses the technique]
+  common_and_differences:
+  - question: "What are the common techniques used by ransomware and spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, used_by_malware, filter ransomware, exec_common attack pattern]
+    target: ["common techniques used by ransomware and spyware"]
+  - question: "What are the different techniques used by backdoor and spyware?"
+    path: [is_malware_type, filter spyware, uses_attack_pattern, used_by_malware, filter backdoor, exec_difference attack pattern]
+    target: ["common techniques used by backdoor and spyware"]
+  - question: "What are the different techniques used by malware that use DDoS attacks and malware that use SQL Injection?"
+    path: [is_malware_type, filter SQL, uses_attack_pattern, used_by_malware, filter DDoS, exec_difference attack pattern]
+    target: ["common techniques used by DDoS malware and SQL Injection malware"]
+  - question: "What are the common techniques used by [malware] and [malware]?"
+    path: [uses_attack_pattern, used_by_malware, exec_common attack_pattern]
+    target: ["common techniques used between the two malware"]
+  - question: "What are the common mitigations used by [malware] and [malware]?"
+    path: [uses_attack_pattern, mitigated_by, mitigates, used_by_malware, exec_common course_of_action]
+    target: ["common mitigation between the two malware"]
+  - question: "What are the different behaviors used by [malware] and [malware]?"
+    path: [uses_attack_pattern, used_by_malware, exec_difference attack_pattern]
+    target: ["different techniques between the two malware"]
+  - question: "What are the common detection strategies used by [malware] and [malware]?"
+    path: [uses_attack_pattern, detected_by, detects, used_by_malware, exec_common x_mitre_data_component]
+    target: ["common mitigation between the two malware"]
+  - question: "What are the different targets of [malware] and [malware]?"
+    path: [uses_attack_pattern, targets, used_by_attack_pattern, used_by_malware, exec_difference x_mitre_asset]
+    target: ["find the different targets between the two malware"]
+  - question: "What are the common targets of [malware] and [malware]?"
+    path: [uses_attack_pattern, targets, used_by_attack_pattern, used_by_malware, exec_common x_mitre_asset]
+    target: ["find the common targets between the two malware"]
+  - question: "What are the different impacts of [malware] and [malware]?"
+    path: [uses_attack_pattern, x_mitre_impact_type, used_by_attack_pattern, used_by_malware, exec_difference x_mitre_impact_type]
+    target: ["find the different impacts between the two malware"]
+  - question: "What are the common impacts of [malware] and [malware]?"
+    path: [uses_attack_pattern, x_mitre_impact_type, used_by_attack_pattern, used_by_malware, exec_common x_mitre_impact_type]
+    target: ["find the common impacts between the two malware"]
+  - question: What are the mitigations available for [malware], and can any of them also be applied to [malware]?
+    path: [uses_attack_pattern, mitigated_by, mitigates, used_by_malware, exec_common course_of_action]
+    target: ["common mitigation between the two malware"]
+  - question: Which are the different techniques of [malware] and [tool]?
+    path: [uses_attack_pattern, used_by_malware, exec_difference attack_pattern]
+    target: ["find the different techniques among the malware and the tool"]
+  - question: Which are the common techniques between [malware] and [tool]?
+    path: [uses_attack_pattern, used_by_malware, exec_common attack_pattern]
+    target: ["find the common techniques among the malware and the tool"]
+  multifilter:
+  - question: What are the targets of the spyware used in campaigns of iranian groups?
+    path: [is_intrusion_set_type, filter iran, is_responsible, uses_malware, uses_attack_pattern, targets]
+    target: ["find the target assets of the spyware used in campaigns of iranian groups"]
+  - question: what are the kill chain phases of the malware, using VNC, employed by chinese groups?
+    path: [is_intrusion_set_type, filter chinese or china, uses_malware, filter VNC, uses_attack_pattern, kill_chain_phases]
+    target: ["kill chain phases of techniques used by malware, used by chinese groups, that use VNC"]
+  - question: what is the impact of attacks, using ABAC policies, employed by malware written in python?
+    path: [is_malware_type, filter python, uses_attack_pattern, filter ABAC, x_mitre_impact_type]
+    target: ["impact of techniques, using ABAC policies, used by malware written in python"]
+  - question: What are the targets of techniques that use CreateRemoteThread or CreateProcessWithTokenW used by spyware employed by russian hackers?
+    path: [is_intrusion_set_type, filter russia, uses_malware, filter spyware, uses_attack_pattern, filter CreateRemoteThread or CreateProcessWithTokenW, targets]
+    target: ["target assets of russian hackers that use spyware that employ CreateRemoteThread or CreateProcessWithTokenW APIs in techniques"]
+  - question: What are the mitigation for trojan used in campaign in which living of the land (LotL) techniques have been used to gain access?
+    path: [is_campaign_type, filter LotL, uses_malware, filter trojan, uses_attack_pattern, mitigated_by]
+    target: ["mitigations for trojan used in campaign in which living of the land (LotL) techniques have been used to gain access"]
+  - question: what are the possible detection strategies to adopt against campaigns exploiting vulnerabilities in Ivanti Connect Secure?
+    path: [is_campaign_type, filter Ivanti, uses_attack_pattern, detected_by]
+    target: [detection strategies against techniques used by campaigns exploiting vulnerabilities in Ivanti Connect Secure]
+  entity_in_path:
+  - question: Which of the two, [malware] or [malware], is classified as spyware?
+    path: [is_malware_type, filter spyware, select <<malware>> <<malware>>]
+    target: ["verify whether one or both malware qualify as spyware"]
+  - question: Which of the two, [malware], or [malware], is mitigated by [course_of_action]?  
+    path: [is_malware_type, select <<malware>> <<malware>>, uses_attack_pattern, mitigated_by, select <<course_of_action>>, show malware]  
+    target: ["verify whether one or all two malware is mitigated by the course of action"] 
+  - question: Which of the two, [malware] or [malware], uses DDoS attack?
+    path: [is_malware_type, filter DDoS, select <<malware>> <<malware>>]
+    target: ["verify whether one or both malware uses DDoS attack"]
+  - question: Which of the three, [malware], [malware], or [malware], uses SQL Injection?  
+    path: [is_malware_type, filter SQL, select <<malware>> <<malware>> <<malware>>]  
+    target: ["verify whether one, two, or all three malware use SQL Injection"]  
+  - question: Which of the three, [malware], [malware], or [malware], is a backdoor or a worm?  
+    path: [is_malware_type, filter worm or backdoor, select <<malware>> <<malware>> <<malware>>]  
+    target: ["verify whether one, two, or all three malware is a backdoor or a worm"]  
+  - question: Which of the three, [malware], [malware], or [malware], use [attack_pattern]?  
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, select <<attack_pattern>>, show malware]  
+    target: ["verify whether one, two, or all three malware use the technique"]  
+  - question: Which of the three, [malware], [malware], or [malware], is mitigated by [course_of_action]?  
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, mitigated_by, select <<course_of_action>>, show malware]  
+    target: ["verify whether one, two, or all three malware is mitigated by the course of action"] 
+  - question: Which of the three, [malware], [malware], or [malware], is detected by [x_mitre_detection]?  
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, mitigated_by, select <<x_mitre_detection>>, show malware]  
+    target: ["verify whether one, two, or all three malware is detected by the detection strategy"] 
+  - question: Which is the techniques that allows [course_of_action] to mitigate [malware]?
+    path: [uses_attack_pattern, mitigated_by, select <<course_of_action>>, show attack_pattern]
+    target: ["find the technique of the malware that is mitigated by the course of action"]
+  - question: Which is the techniques that allows [x_mitre_detection] to mitigate [malware]?
+    path: [uses_attack_pattern, detected_by, select <<x_mitre_detection>>, show attack_pattern]
+    target: ["find the technique of the malware that is detected by the detection strategy"]
+  - question: Which is the malware that has been used by [intrusion_set] in [campaign]?
+    path: [attributed_to, select <<intrusion_set>>, uses_malware]
+    target: ["find malware used by the group in the campaign"]
+  - question: Which are the common target assets of [malware], [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, targets, exec_common x_mitre_asset]
+    target: ["find the common target assets among these three malware"]
+  - question: Which are the different target assets of [malware], [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, targets, exec_difference x_mitre_asset]
+    target: ["find the different target assets among these three malware"]
+  - question: Which are the common techniques of [malware], [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, exec_common attack_pattern]
+    target: ["find the common techniques among these three malware"]
+  - question: Which are the different techniques of [malware], [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, targets, exec_difference attack_pattern]
+    target: ["find the different techniques among these three malware"]
+  - question: Which are the common mitigation for [malware], [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>> <<malware>>, uses_attack_pattern, mitigated_by, exec_common course_of_action]
+    target: ["find the common mitigation for these three malware"]
+  - question: Which are the common mitigation for [attack_pattern], [attack_pattern] and [attack_pattern]?
+    path: [is_attack_pattern_type, select <<attack_pattern>> <<attack_pattern>> <<attack_pattern>>, mitigated_by, exec_common attack_pattern]
+    target: ["find the common mitigation for these three attack_pattern"]
+  - question: What are the different kill chain phases between [malware] and [malware]?
+    path: [is_malware_type, select <<malware>> <<malware>>, uses_attack_pattern, kill_chain_phases, exec_difference kill_chain_phases]
+    target: ["find the different kill chain phases between the two malware"]
+  - question: What are the common target assets between spyware and [malware]?
+    path: [uses_attack_pattern, targets, used_by_attack_pattern, used_by_malware, filter spyware, exec_common x_mitre_asset]
+    target: ["find common target assets between spyware and the other malware"]
+  - question : What are the different campaigns in which [malware] and [malware] have been involved?
+    path: [is_malware_type, select <<malware>> <<malware>>, used_by_compaign, exec_difference campaign]
+    target: ["Identify the different campaigns in which the two malware have been involved"]
+  - question:  What are the common campaigns in which [malware] and malware that use DDoS have been involved in?
+    path: [used_by_campaign, uses_malware, filter DDoS, exec_common campaign]
+    target: ["Identify the different campaigns in which the two malware have been involved"]
