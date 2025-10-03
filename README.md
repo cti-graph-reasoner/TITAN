@@ -1,5 +1,11 @@
 # TITAN — End-to-End Pipeline (ATT&CK STIX → train/val/test)
 
+
+<p align="center">
+  <img src="images/titan.png" alt="TITAN framework" width="600">
+</p>
+
+
 This repository builds a MITRE ATT&CK graph from STIX bundles, generates datasets (CoT / NoCoT), and creates **train / validation / test** splits.
 
 ## Repository layout
