@@ -2,7 +2,7 @@
 
 
 <p align="center">
-  <img src="images/titan.png" alt="TITAN framework" width="600">
+  <img src="images/TITAN.png" alt="TITAN framework" width="600">
 </p>
 
 
