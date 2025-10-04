@@ -3,7 +3,7 @@
 TITAN builds a MITRE ATT&CK knowledge graph from STIX bundles, generates QA/navigation datasets (CoT/NoCoT), creates **train/validation/test** splits, and provides training/testing scripts to fine‑tune and evaluate path‑generation models.
 
 <p align="center">
-  <img src="images/titan.png" alt="TITAN framework" width="65%">
+  <img src="images/TITAN.png" alt="TITAN framework" width="65%">
 </p>
 
 ## Repository layout
