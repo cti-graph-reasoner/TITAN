@@ -1,0 +1,418 @@
+{
+ "overall": {
+  "bucket": "overall",
+  "n": 1502,
+  "query_em": 0.40878828229027964,
+  "query_em_ci": [
+   0.38348868175765644,
+   0.4341045272969374
+  ],
+  "entity_f1": 0.5969736105934698,
+  "entity_f1_ci": [
+   0.5610397593617741,
+   0.6317637474683491
+  ],
+  "well_formed": 1.0,
+  "exec_error_rate": 0.003328894806924101,
+  "pred_nonempty": 0.5878828229027963
+ },
+ "by_length": [
+  {
+   "bucket": "L1",
+   "n": 569,
+   "query_em": 0.46748681898066785,
+   "query_em_ci": [
+    0.4270650263620387,
+    0.507908611599297
+   ],
+   "entity_f1": 0.7013888888888888,
+   "entity_f1_ci": [
+    0.6492187500000001,
+    0.75
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.6608084358523726
+  },
+  {
+   "bucket": "L2",
+   "n": 527,
+   "query_em": 0.40037950664136623,
+   "query_em_ci": [
+    0.3586337760910816,
+    0.44212523719165087
+   ],
+   "entity_f1": 0.5229478207164978,
+   "entity_f1_ci": [
+    0.4701224214480313,
+    0.573154772638932
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.7229601518026565
+  },
+  {
+   "bucket": "L3",
+   "n": 167,
+   "query_em": 0.0718562874251497,
+   "query_em_ci": [
+    0.03592814371257485,
+    0.11377245508982035
+   ],
+   "entity_f1": 0.6318808545020212,
+   "entity_f1_ci": [
+    0.4935346951827906,
+    0.749874877764135
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.5149700598802395
+  },
+  {
+   "bucket": "L4+",
+   "n": 239,
+   "query_em": 0.5230125523012552,
+   "query_em_ci": [
+    0.4602510460251046,
+    0.5899581589958159
+   ],
+   "entity_f1": 0.41575189048588507,
+   "entity_f1_ci": [
+    0.2783090825700626,
+    0.5549376648721311
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.02092050209205021,
+   "pred_nonempty": 0.16736401673640167
+  }
+ ],
+ "by_operator": [
+  {
+   "bucket": "exec_common",
+   "n": 4,
+   "query_em": 1.0,
+   "query_em_ci": [
+    1.0,
+    1.0
+   ],
+   "entity_f1": 1.0,
+   "entity_f1_ci": [
+    1.0,
+    1.0
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.75
+  },
+  {
+   "bucket": "exec_difference",
+   "n": 16,
+   "query_em": 0.0625,
+   "query_em_ci": [
+    0.0,
+    0.1875
+   ],
+   "entity_f1": 0.19077568134171907,
+   "entity_f1_ci": [
+    0.0,
+    0.43013626834381524
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.125,
+   "pred_nonempty": 0.25
+  },
+  {
+   "bucket": "filter",
+   "n": 424,
+   "query_em": 0.33962264150943394,
+   "query_em_ci": [
+    0.294811320754717,
+    0.38443396226415094
+   ],
+   "entity_f1": 0.7013922323396701,
+   "entity_f1_ci": [
+    0.608565528847171,
+    0.783584340277727
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.29952830188679247
+  },
+  {
+   "bucket": "plain",
+   "n": 1031,
+   "query_em": 0.44616876818622697,
+   "query_em_ci": [
+    0.4151309408341416,
+    0.4762609117361784
+   ],
+   "entity_f1": 0.5968754345447285,
+   "entity_f1_ci": [
+    0.5555874962260344,
+    0.6405455373610309
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.7177497575169738
+  },
+  {
+   "bucket": "select",
+   "n": 27,
+   "query_em": 0.18518518518518517,
+   "query_em_ci": [
+    0.037037037037037035,
+    0.3333333333333333
+   ],
+   "entity_f1": 0.2777777777777778,
+   "entity_f1_ci": [
+    0.1111111111111111,
+    0.5
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.1111111111111111,
+   "pred_nonempty": 0.3333333333333333
+  }
+ ],
+ "by_section": [
+  {
+   "bucket": "common_and_differences",
+   "n": 10,
+   "query_em": 0.1,
+   "query_em_ci": [
+    0.0,
+    0.3
+   ],
+   "entity_f1": 0.19077568134171907,
+   "entity_f1_ci": [
+    0.0,
+    0.43013626834381524
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.2,
+   "pred_nonempty": 0.3
+  },
+  {
+   "bucket": "double_entity",
+   "n": 5,
+   "query_em": 0.4,
+   "query_em_ci": [
+    0.0,
+    0.8
+   ],
+   "entity_f1": 0.4,
+   "entity_f1_ci": [
+    0.0,
+    0.8
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.4,
+   "pred_nonempty": 0.4
+  },
+  {
+   "bucket": "entity_in_path",
+   "n": 24,
+   "query_em": 0.25,
+   "query_em_ci": [
+    0.08333333333333333,
+    0.4166666666666667
+   ],
+   "entity_f1": 0.625,
+   "entity_f1_ci": [
+    0.25,
+    1.0
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.2916666666666667
+  },
+  {
+   "bucket": "intra_relationship",
+   "n": 454,
+   "query_em": 0.3502202643171806,
+   "query_em_ci": [
+    0.3083149779735683,
+    0.394273127753304
+   ],
+   "entity_f1": 0.5555555555555556,
+   "entity_f1_ci": [
+    0.48333333333333334,
+    0.6279166666666666
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.5925110132158591
+  },
+  {
+   "bucket": "multi_hop_relationship",
+   "n": 460,
+   "query_em": 0.3282608695652174,
+   "query_em_ci": [
+    0.28695652173913044,
+    0.3717391304347826
+   ],
+   "entity_f1": 0.69503997784753,
+   "entity_f1_ci": [
+    0.623497454459166,
+    0.7656097036751851
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.5956521739130435
+  },
+  {
+   "bucket": "multi_with_more_filter",
+   "n": 15,
+   "query_em": 0.13333333333333333,
+   "query_em_ci": [
+    0.0,
+    0.3333333333333333
+   ],
+   "entity_f1": NaN,
+   "entity_f1_ci": [
+    NaN,
+    NaN
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.2
+  },
+  {
+   "bucket": "multifilter",
+   "n": 1,
+   "query_em": 0.0,
+   "query_em_ci": [
+    0.0,
+    0.0
+   ],
+   "entity_f1": 0.0,
+   "entity_f1_ci": [
+    0.0,
+    0.0
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.0
+  },
+  {
+   "bucket": "multihop_no_entity",
+   "n": 8,
+   "query_em": 0.125,
+   "query_em_ci": [
+    0.0,
+    0.375
+   ],
+   "entity_f1": 0.4264478764478764,
+   "entity_f1_ci": [
+    0.0642857142857143,
+    0.7886100386100388
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.625
+  },
+  {
+   "bucket": "multihop_one_entity_filter",
+   "n": 106,
+   "query_em": 0.7358490566037735,
+   "query_em_ci": [
+    0.6509433962264151,
+    0.8113207547169812
+   ],
+   "entity_f1": 0.4563189143341815,
+   "entity_f1_ci": [
+    0.13486005089058523,
+    0.7777777777777778
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.11320754716981132
+  },
+  {
+   "bucket": "other_double_entity",
+   "n": 8,
+   "query_em": 0.125,
+   "query_em_ci": [
+    0.0,
+    0.375
+   ],
+   "entity_f1": 0.125,
+   "entity_f1_ci": [
+    0.0,
+    0.375
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.125,
+   "pred_nonempty": 0.5
+  },
+  {
+   "bucket": "single_hop_not_filter",
+   "n": 254,
+   "query_em": 0.7322834645669292,
+   "query_em_ci": [
+    0.6771653543307087,
+    0.7834645669291339
+   ],
+   "entity_f1": 0.7748016882107791,
+   "entity_f1_ci": [
+    0.7200952841350569,
+    0.8270908296249206
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.8228346456692913
+  },
+  {
+   "bucket": "single_hop_relationship_filter",
+   "n": 157,
+   "query_em": 0.17197452229299362,
+   "query_em_ci": [
+    0.11464968152866242,
+    0.22929936305732485
+   ],
+   "entity_f1": 0.23056776244819166,
+   "entity_f1_ci": [
+    0.15718076136944303,
+    0.3127022653721683
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.0,
+   "pred_nonempty": 0.6050955414012739
+  }
+ ],
+ "by_skeleton": [
+  {
+   "bucket": "skeleton_unseen=False",
+   "n": 766,
+   "query_em": 0.40600522193211486,
+   "query_em_ci": [
+    0.3720300261096606,
+    0.4425587467362924
+   ],
+   "entity_f1": 0.6043433778029862,
+   "entity_f1_ci": [
+    0.5470252417067469,
+    0.6612082195494854
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.005221932114882507,
+   "pred_nonempty": 0.5
+  },
+  {
+   "bucket": "skeleton_unseen=True",
+   "n": 736,
+   "query_em": 0.4116847826086957,
+   "query_em_ci": [
+    0.375,
+    0.4483695652173913
+   ],
+   "entity_f1": 0.5914086843332227,
+   "entity_f1_ci": [
+    0.5476463530848413,
+    0.636582957574262
+   ],
+   "well_formed": 1.0,
+   "exec_error_rate": 0.001358695652173913,
+   "pred_nonempty": 0.6793478260869565
+  }
+ ]
+}

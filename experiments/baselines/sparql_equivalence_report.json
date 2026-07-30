@@ -1,0 +1,53 @@
+{
+ "n": 4000,
+ "match_rate_raw": 1.0,
+ "n_known_gold_bug_rows": 117,
+ "match_rate_excl_known_gold_bugs": 1.0,
+ "sparql_errors": 0,
+ "by_section": {
+  "common_and_differences": {
+   "mean": 1.0,
+   "count": 55
+  },
+  "double_entity": {
+   "mean": 1.0,
+   "count": 27
+  },
+  "entity_in_path": {
+   "mean": 1.0,
+   "count": 48
+  },
+  "intra_relationship": {
+   "mean": 1.0,
+   "count": 963
+  },
+  "multi_hop_relationship": {
+   "mean": 1.0,
+   "count": 868
+  },
+  "multifilter": {
+   "mean": 1.0,
+   "count": 2
+  },
+  "multihop_no_entity": {
+   "mean": 1.0,
+   "count": 33
+  },
+  "multihop_one_entity_filter": {
+   "mean": 1.0,
+   "count": 42
+  },
+  "other_double_entity": {
+   "mean": 1.0,
+   "count": 49
+  },
+  "single_hop_not_filter": {
+   "mean": 1.0,
+   "count": 1395
+  },
+  "single_hop_relationship_filter": {
+   "mean": 1.0,
+   "count": 518
+  }
+ }
+}

@@ -6,6 +6,8 @@ MODELS/
 .venv-vllm/
 __pycache__/
 unsloth_compiled_cache/
+*.egg-info/
+.pytest_cache/
 
 # Run logs (noisy, machine-specific)
 logs_*.log
@@ -13,12 +15,21 @@ logs_*.log
 # Raw generation dump exceeds GitHub's 100MB hard file-size limit (DeepSeek's
 # verbose <think> traces over the full 15,627-row test set); the scored
 # results (eval_report.json / eval_per_example.csv) are tracked instead.
-baselines/deepseek_r1_70b_heldout_full_v3.json
+experiments/baselines/deepseek_r1_70b_heldout_full_v3.json
 
-# Local-only working material — NOT for the public repo:
-# confidential peer reviews, non-anonymous paper draft, venue planning,
-# internal session notes
+# Oversized raw training splits (>50MB each). Regenerate them locally with
+# experiments/datasets/create_dataset_splits.py and
+# experiments/datasets/create_template_disjoint_splits.py — see
+# experiments/README.md.
+experiments/datasets/CoT/train_dataset.csv
+experiments/datasets/TEMPLATE_DISJOINT/CoT/train.csv
+experiments/datasets/TEMPLATE_DISJOINT/CoT/train.annotated.csv
+experiments/datasets/TEMPLATE_DISJOINT/SPARQL_COT_TRAIN/train_dataset.csv
+
+# Local-only working material — not part of the public repository:
+# paper draft, peer reviews, venue planning, internal session notes.
 Review TITAN.txt
 TITAN_paper-1.pdf
 EACL topic 2027.txt
 session_log/
+LATEX version/

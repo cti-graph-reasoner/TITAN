@@ -1,0 +1,134 @@
+{
+  "train": {
+    "rows": 65529,
+    "templates": 228,
+    "sections": {
+      "multi_hop_relationship": 21275,
+      "intra_relationship": 16419,
+      "single_hop_not_filter": 12575,
+      "single_hop_relationship_filter": 7155,
+      "multihop_one_entity_filter": 5176,
+      "entity_in_path": 1159,
+      "multi_with_more_filter": 556,
+      "common_and_differences": 408,
+      "multihop_no_entity": 354,
+      "other_double_entity": 298,
+      "double_entity": 128,
+      "multifilter": 26
+    },
+    "path_length": {
+      "1": 27048,
+      "2": 26247,
+      "3": 6535,
+      "4": 4003,
+      "5": 994,
+      "6": 695,
+      "7": 7
+    },
+    "operators": {
+      "filter": 18634,
+      "select": 951,
+      "exec_common": 1336,
+      "exec_difference": 176
+    }
+  },
+  "val": {
+    "rows": 3855,
+    "templates": 186,
+    "sections": {
+      "multi_hop_relationship": 1250,
+      "intra_relationship": 966,
+      "single_hop_not_filter": 740,
+      "single_hop_relationship_filter": 421,
+      "multihop_one_entity_filter": 304,
+      "entity_in_path": 68,
+      "multi_with_more_filter": 33,
+      "common_and_differences": 24,
+      "multihop_no_entity": 21,
+      "other_double_entity": 18,
+      "double_entity": 8,
+      "multifilter": 2
+    },
+    "path_length": {
+      "1": 1619,
+      "2": 1490,
+      "3": 411,
+      "4": 238,
+      "5": 58,
+      "6": 38,
+      "7": 1
+    },
+    "operators": {
+      "filter": 1091,
+      "select": 56,
+      "exec_common": 80,
+      "exec_difference": 9
+    }
+  },
+  "test_iid": {
+    "rows": 7702,
+    "templates": 197,
+    "sections": {
+      "multi_hop_relationship": 2499,
+      "intra_relationship": 1931,
+      "single_hop_not_filter": 1479,
+      "single_hop_relationship_filter": 842,
+      "multihop_one_entity_filter": 610,
+      "entity_in_path": 136,
+      "multi_with_more_filter": 65,
+      "common_and_differences": 48,
+      "multihop_no_entity": 42,
+      "other_double_entity": 34,
+      "double_entity": 14,
+      "multifilter": 2
+    },
+    "path_length": {
+      "1": 3134,
+      "2": 3128,
+      "3": 783,
+      "4": 467,
+      "5": 109,
+      "6": 79,
+      "7": 2
+    },
+    "operators": {
+      "filter": 2166,
+      "select": 106,
+      "exec_common": 160,
+      "exec_difference": 16
+    }
+  },
+  "test_heldout": {
+    "rows": 15627,
+    "templates": 70,
+    "sections": {
+      "multi_hop_relationship": 4790,
+      "intra_relationship": 4734,
+      "single_hop_not_filter": 2641,
+      "single_hop_relationship_filter": 1639,
+      "multihop_one_entity_filter": 1101,
+      "entity_in_path": 251,
+      "multi_with_more_filter": 153,
+      "common_and_differences": 100,
+      "other_double_entity": 84,
+      "multihop_no_entity": 80,
+      "double_entity": 50,
+      "multifilter": 4
+    },
+    "path_length": {
+      "1": 5984,
+      "2": 5425,
+      "3": 1732,
+      "4": 1956,
+      "5": 381,
+      "6": 149
+    },
+    "operators": {
+      "filter": 4599,
+      "select": 485,
+      "exec_common": 44,
+      "exec_difference": 150
+    },
+    "skeleton_unseen_rows": 7859
+  }
+}
