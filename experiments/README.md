@@ -116,6 +116,10 @@ python experiments/baselines/score_sparql_predictions.py \
 `experiments/rescore_all_sparql.sh` re-runs this scoring step for every
 tracked SPARQL prediction file in one pass.
 
+The Graph-RAG baseline lives in its own subfolder,
+[`experiments/baselines/graphrag/`](baselines/graphrag/README.md), since it
+splits retrieval and generation into separate cluster jobs.
+
 ## 6. Validate the splits and build the results tables
 
 ```bash
