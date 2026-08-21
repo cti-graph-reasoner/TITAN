@@ -1,0 +1,418 @@
+{
+  "overall": {
+    "bucket": "overall",
+    "n": 1502,
+    "path_em": 0.39280958721704395,
+    "path_em_ci": [
+      0.3681757656458056,
+      0.4181091877496671
+    ],
+    "entity_f1": 0.5897934176421067,
+    "entity_f1_ci": [
+      0.5570618838670574,
+      0.6253040801134047
+    ],
+    "well_formed": 1.0,
+    "gold_executable": 0.4580559254327563,
+    "pred_nonempty": 0.625832223701731
+  },
+  "by_length": [
+    {
+      "bucket": "L1",
+      "n": 569,
+      "path_em": 0.44639718804920914,
+      "path_em_ci": [
+        0.40597539543058,
+        0.48857644991212656
+      ],
+      "entity_f1": 0.6979166666666666,
+      "entity_f1_ci": [
+        0.6388888888888888,
+        0.7466145833333333
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.5061511423550088,
+      "pred_nonempty": 0.7328646748681898
+    },
+    {
+      "bucket": "L2",
+      "n": 527,
+      "path_em": 0.45161290322580644,
+      "path_em_ci": [
+        0.4098671726755218,
+        0.4952561669829222
+      ],
+      "entity_f1": 0.5018734606993115,
+      "entity_f1_ci": [
+        0.4496581772316453,
+        0.5526998746658507
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.5863377609108159,
+      "pred_nonempty": 0.6717267552182163
+    },
+    {
+      "bucket": "L3",
+      "n": 167,
+      "path_em": 0.059880239520958084,
+      "path_em_ci": [
+        0.023952095808383235,
+        0.09580838323353294
+      ],
+      "entity_f1": 0.6831986839593857,
+      "entity_f1_ci": [
+        0.5645634244700329,
+        0.7851057103161015
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.25748502994011974,
+      "pred_nonempty": 0.6227544910179641
+    },
+    {
+      "bucket": "L4+",
+      "n": 239,
+      "path_em": 0.3682008368200837,
+      "path_em_ci": [
+        0.301255230125523,
+        0.4309623430962343
+      ],
+      "entity_f1": 0.4233630952380952,
+      "entity_f1_ci": [
+        0.2775297619047619,
+        0.5691964285714285
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.200836820083682,
+      "pred_nonempty": 0.2719665271966527
+    }
+  ],
+  "by_operator": [
+    {
+      "bucket": "exec_common",
+      "n": 4,
+      "path_em": 0.75,
+      "path_em_ci": [
+        0.25,
+        1.0
+      ],
+      "entity_f1": 0.6666666666666666,
+      "entity_f1_ci": [
+        0.0,
+        1.0
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.75,
+      "pred_nonempty": 0.75
+    },
+    {
+      "bucket": "exec_difference",
+      "n": 16,
+      "path_em": 0.125,
+      "path_em_ci": [
+        0.0,
+        0.3125
+      ],
+      "entity_f1": 0.2222222222222222,
+      "entity_f1_ci": [
+        0.0,
+        0.5555555555555556
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.5625,
+      "pred_nonempty": 0.25
+    },
+    {
+      "bucket": "filter",
+      "n": 424,
+      "path_em": 0.27122641509433965,
+      "path_em_ci": [
+        0.22877358490566038,
+        0.3113207547169811
+      ],
+      "entity_f1": 0.6923920504010399,
+      "entity_f1_ci": [
+        0.5963172906259624,
+        0.7819879625426761
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.18632075471698112,
+      "pred_nonempty": 0.37028301886792453
+    },
+    {
+      "bucket": "plain",
+      "n": 1031,
+      "path_em": 0.4481086323957323,
+      "path_em_ci": [
+        0.4189864209505335,
+        0.4772065955383123
+      ],
+      "entity_f1": 0.5856284962972147,
+      "entity_f1_ci": [
+        0.5428847550883427,
+        0.6234261823697317
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.5615906886517944,
+      "pred_nonempty": 0.7303588748787585
+    },
+    {
+      "bucket": "select",
+      "n": 27,
+      "path_em": 0.2962962962962963,
+      "path_em_ci": [
+        0.1111111111111111,
+        0.48148148148148145
+      ],
+      "entity_f1": 0.4444444444444444,
+      "entity_f1_ci": [
+        0.2222222222222222,
+        0.6680555555555543
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.6666666666666666,
+      "pred_nonempty": 0.8518518518518519
+    }
+  ],
+  "by_section": [
+    {
+      "bucket": "common_and_differences",
+      "n": 10,
+      "path_em": 0.2,
+      "path_em_ci": [
+        0.0,
+        0.5
+      ],
+      "entity_f1": 0.2222222222222222,
+      "entity_f1_ci": [
+        0.0,
+        0.5555555555555556
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.9,
+      "pred_nonempty": 0.4
+    },
+    {
+      "bucket": "double_entity",
+      "n": 5,
+      "path_em": 0.8,
+      "path_em_ci": [
+        0.4,
+        1.0
+      ],
+      "entity_f1": 0.8,
+      "entity_f1_ci": [
+        0.4,
+        1.0
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 1.0,
+      "pred_nonempty": 0.8
+    },
+    {
+      "bucket": "entity_in_path",
+      "n": 24,
+      "path_em": 0.25,
+      "path_em_ci": [
+        0.08333333333333333,
+        0.4166666666666667
+      ],
+      "entity_f1": 0.625,
+      "entity_f1_ci": [
+        0.25,
+        0.875
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.3333333333333333,
+      "pred_nonempty": 0.625
+    },
+    {
+      "bucket": "intra_relationship",
+      "n": 454,
+      "path_em": 0.3392070484581498,
+      "path_em_ci": [
+        0.29955947136563876,
+        0.3832599118942731
+      ],
+      "entity_f1": 0.5944444444444444,
+      "entity_f1_ci": [
+        0.5222222222222223,
+        0.6612499999999999
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.3964757709251101,
+      "pred_nonempty": 0.6894273127753304
+    },
+    {
+      "bucket": "multi_hop_relationship",
+      "n": 460,
+      "path_em": 0.3391304347826087,
+      "path_em_ci": [
+        0.2956521739130435,
+        0.3826086956521739
+      ],
+      "entity_f1": 0.6008287144299174,
+      "entity_f1_ci": [
+        0.5261693927655834,
+        0.6759790110293453
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.31956521739130433,
+      "pred_nonempty": 0.5956521739130435
+    },
+    {
+      "bucket": "multi_with_more_filter",
+      "n": 15,
+      "path_em": 0.13333333333333333,
+      "path_em_ci": [
+        0.0,
+        0.3333333333333333
+      ],
+      "entity_f1": NaN,
+      "entity_f1_ci": [
+        NaN,
+        NaN
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.0,
+      "pred_nonempty": 0.06666666666666667
+    },
+    {
+      "bucket": "multifilter",
+      "n": 1,
+      "path_em": 0.0,
+      "path_em_ci": [
+        0.0,
+        0.0
+      ],
+      "entity_f1": 0.0,
+      "entity_f1_ci": [
+        0.0,
+        0.0
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 1.0,
+      "pred_nonempty": 0.0
+    },
+    {
+      "bucket": "multihop_no_entity",
+      "n": 8,
+      "path_em": 0.25,
+      "path_em_ci": [
+        0.0,
+        0.625
+      ],
+      "entity_f1": 0.4642857142857143,
+      "entity_f1_ci": [
+        0.0642857142857143,
+        0.8642857142857142
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.625,
+      "pred_nonempty": 0.75
+    },
+    {
+      "bucket": "multihop_one_entity_filter",
+      "n": 106,
+      "path_em": 0.36792452830188677,
+      "path_em_ci": [
+        0.27358490566037735,
+        0.46226415094339623
+      ],
+      "entity_f1": 0.3333333333333333,
+      "entity_f1_ci": [
+        0.0,
+        0.6666666666666666
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.08490566037735849,
+      "pred_nonempty": 0.2169811320754717
+    },
+    {
+      "bucket": "other_double_entity",
+      "n": 8,
+      "path_em": 0.125,
+      "path_em_ci": [
+        0.0,
+        0.375
+      ],
+      "entity_f1": 0.125,
+      "entity_f1_ci": [
+        0.0,
+        0.375
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 1.0,
+      "pred_nonempty": 0.875
+    },
+    {
+      "bucket": "single_hop_not_filter",
+      "n": 254,
+      "path_em": 0.7047244094488189,
+      "path_em_ci": [
+        0.649507874015748,
+        0.7560039370078739
+      ],
+      "entity_f1": 0.740771879635516,
+      "entity_f1_ci": [
+        0.6836460187539734,
+        0.7982109424666243
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.8661417322834646,
+      "pred_nonempty": 0.8228346456692913
+    },
+    {
+      "bucket": "single_hop_relationship_filter",
+      "n": 157,
+      "path_em": 0.28662420382165604,
+      "path_em_ci": [
+        0.2229299363057325,
+        0.35668789808917195
+      ],
+      "entity_f1": 0.31421675234718155,
+      "entity_f1_ci": [
+        0.22916666666666666,
+        0.40702286260019716
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.6114649681528662,
+      "pred_nonempty": 0.535031847133758
+    }
+  ],
+  "by_skeleton": [
+    {
+      "bucket": "skeleton_unseen=False",
+      "n": 766,
+      "path_em": 0.38511749347258484,
+      "path_em_ci": [
+        0.35117493472584854,
+        0.4177545691906005
+      ],
+      "entity_f1": 0.5608313043227874,
+      "entity_f1_ci": [
+        0.503582416921873,
+        0.6130350317763289
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.38642297650130547,
+      "pred_nonempty": 0.5744125326370757
+    },
+    {
+      "bucket": "skeleton_unseen=True",
+      "n": 736,
+      "path_em": 0.4008152173913043,
+      "path_em_ci": [
+        0.3654891304347826,
+        0.4361413043478261
+      ],
+      "entity_f1": 0.6116627685158783,
+      "entity_f1_ci": [
+        0.5661720041797488,
+        0.6594857110722464
+      ],
+      "well_formed": 1.0,
+      "gold_executable": 0.532608695652174,
+      "pred_nonempty": 0.6793478260869565
+    }
+  ]
+}

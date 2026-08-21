@@ -1,0 +1,790 @@
+{
+ "is_x_mitre_collection_type": {
+  "source_type": "x_mitre_collection",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_collection->?": 3
+  }
+ },
+ "spec_version": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 847,
+   "malware->?": 726,
+   "course_of_action->?": 318,
+   "intrusion_set->?": 167,
+   "x_mitre_data_component->?": 121,
+   "tool->?": 88,
+   "x_mitre_data_source->?": 42,
+   "campaign->?": 27,
+   "Post-Adversary Device Access->?": 25,
+   "x_mitre_tactic->?": 20,
+   "x_mitre_asset->?": 14,
+   "x_mitre_collection->?": 3,
+   "x_mitre_matrix->?": 3,
+   "Without Adversary Device Access->?": 3,
+   "Pre-Adversary Device Access->?": 2,
+   "identity->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "name": {
+  "source_type": "attack_pattern",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "attack_pattern->attack_pattern": 733,
+   "course_of_action->course_of_action": 317,
+   "x_mitre_data_component->x_mitre_data_component": 120,
+   "malware->malware": 119,
+   "intrusion_set->intrusion_set": 100,
+   "x_mitre_data_source->x_mitre_data_source": 41,
+   "Post-Adversary Device Access->Post-Adversary Device Access": 25,
+   "x_mitre_tactic->x_mitre_tactic": 20,
+   "x_mitre_asset->x_mitre_asset": 14,
+   "tool->tool": 11,
+   "x_mitre_collection->x_mitre_collection": 3,
+   "x_mitre_matrix->x_mitre_matrix": 3,
+   "Without Adversary Device Access->Without Adversary Device Access": 3,
+   "Pre-Adversary Device Access->Pre-Adversary Device Access": 2,
+   "identity->identity": 1,
+   "Availability->Availability": 1
+  }
+ },
+ "description": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 2530,
+   "malware->?": 1112,
+   "course_of_action->?": 446,
+   "intrusion_set->?": 375,
+   "tool->?": 148,
+   "x_mitre_data_component->?": 141,
+   "x_mitre_tactic->?": 77,
+   "Post-Adversary Device Access->?": 53,
+   "x_mitre_data_source->?": 46,
+   "campaign->?": 28,
+   "x_mitre_asset->?": 14,
+   "Without Adversary Device Access->?": 7,
+   "x_mitre_collection->?": 6,
+   "x_mitre_matrix->?": 5,
+   "Pre-Adversary Device Access->?": 4,
+   "Availability->?": 2
+  }
+ },
+ "modified": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 5743,
+   "malware->?": 2546,
+   "course_of_action->?": 1249,
+   "intrusion_set->?": 923,
+   "tool->?": 361,
+   "x_mitre_data_component->?": 184,
+   "x_mitre_data_source->?": 110,
+   "x_mitre_tactic->?": 104,
+   "Post-Adversary Device Access->?": 90,
+   "x_mitre_collection->?": 88,
+   "campaign->?": 37,
+   "Without Adversary Device Access->?": 16,
+   "x_mitre_asset->?": 14,
+   "x_mitre_matrix->?": 13,
+   "Pre-Adversary Device Access->?": 6,
+   "identity->?": 2,
+   "Availability->?": 2
+  }
+ },
+ "is_attack_pattern_type": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 847,
+   "Post-Adversary Device Access->?": 25,
+   "Without Adversary Device Access->?": 3,
+   "course_of_action->?": 2,
+   "x_mitre_data_component->?": 2,
+   "Pre-Adversary Device Access->?": 2,
+   "x_mitre_data_source->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "kill_chain_phases": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 1506,
+   "Post-Adversary Device Access->?": 52,
+   "Without Adversary Device Access->?": 9,
+   "x_mitre_data_component->?": 5,
+   "course_of_action->?": 3,
+   "Pre-Adversary Device Access->?": 3,
+   "x_mitre_data_source->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_platforms": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 1156,
+   "malware->?": 716,
+   "tool->?": 87,
+   "x_mitre_data_source->?": 60,
+   "Post-Adversary Device Access->?": 25,
+   "x_mitre_asset->?": 14,
+   "attack_pattern->x_mitre_asset": 5,
+   "intrusion_set->?": 5,
+   "course_of_action->?": 4,
+   "x_mitre_data_component->?": 3,
+   "Without Adversary Device Access->?": 3,
+   "Pre-Adversary Device Access->?": 2,
+   "Availability->?": 1,
+   "campaign->?": 1
+  }
+ },
+ "external_references": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 4018,
+   "malware->?": 2811,
+   "course_of_action->?": 2023,
+   "intrusion_set->?": 790,
+   "tool->?": 424,
+   "x_mitre_tactic->?": 144,
+   "x_mitre_data_component->?": 120,
+   "Post-Adversary Device Access->?": 116,
+   "x_mitre_data_source->?": 94,
+   "campaign->?": 28,
+   "Without Adversary Device Access->?": 21,
+   "x_mitre_asset->?": 14,
+   "x_mitre_matrix->?": 13,
+   "Pre-Adversary Device Access->?": 6,
+   "x_mitre_collection->?": 4,
+   "identity->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_data_sources": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 2812,
+   "attack_pattern->x_mitre_data_source": 31,
+   "course_of_action->?": 6,
+   "x_mitre_data_component->?": 6,
+   "Post-Adversary Device Access->?": 6,
+   "Without Adversary Device Access->?": 3,
+   "x_mitre_data_source->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_contributors": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 703,
+   "malware->?": 613,
+   "intrusion_set->?": 177,
+   "tool->?": 74,
+   "x_mitre_data_source->?": 69,
+   "x_mitre_tactic->?": 16,
+   "campaign->?": 6,
+   "x_mitre_data_component->?": 2,
+   "Post-Adversary Device Access->?": 2,
+   "course_of_action->?": 1,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_domains": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 975,
+   "malware->?": 743,
+   "course_of_action->?": 356,
+   "intrusion_set->?": 188,
+   "x_mitre_data_component->?": 161,
+   "tool->?": 88,
+   "x_mitre_data_source->?": 42,
+   "x_mitre_tactic->?": 41,
+   "campaign->?": 28,
+   "Post-Adversary Device Access->?": 25,
+   "x_mitre_asset->?": 14,
+   "x_mitre_matrix->?": 3,
+   "identity->?": 3,
+   "Without Adversary Device Access->?": 3,
+   "x_mitre_collection->?": 2,
+   "Pre-Adversary Device Access->?": 2,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_is_subtechnique": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 738,
+   "Post-Adversary Device Access->?": 7,
+   "Without Adversary Device Access->?": 3,
+   "course_of_action->?": 2,
+   "x_mitre_data_component->?": 2,
+   "x_mitre_data_source->?": 1
+  }
+ },
+ "mitigated_by": {
+  "source_type": "attack_pattern",
+  "target_type": "course_of_action",
+  "signatures": {
+   "attack_pattern->course_of_action": 2194,
+   "Post-Adversary Device Access->course_of_action": 19,
+   "Without Adversary Device Access->course_of_action": 4,
+   "x_mitre_data_component->course_of_action": 3,
+   "course_of_action->course_of_action": 2,
+   "Availability->course_of_action": 2,
+   "x_mitre_data_source->course_of_action": 1
+  }
+ },
+ "detected_by": {
+  "source_type": "attack_pattern",
+  "target_type": "x_mitre_data_component",
+  "signatures": {
+   "attack_pattern->x_mitre_data_component": 2296,
+   "x_mitre_data_component->x_mitre_data_component": 5,
+   "Post-Adversary Device Access->x_mitre_data_component": 4,
+   "course_of_action->x_mitre_data_component": 3,
+   "attack_pattern->attack_pattern": 3,
+   "Availability->x_mitre_data_component": 1
+  }
+ },
+ "used_by_malware": {
+  "source_type": "attack_pattern",
+  "target_type": "malware",
+  "signatures": {
+   "attack_pattern->malware": 10784,
+   "x_mitre_data_component->malware": 208,
+   "attack_pattern->intrusion_set": 140,
+   "Post-Adversary Device Access->malware": 56,
+   "course_of_action->malware": 36,
+   "attack_pattern->campaign": 33,
+   "x_mitre_data_component->intrusion_set": 4,
+   "course_of_action->intrusion_set": 1,
+   "x_mitre_data_component->campaign": 1,
+   "Availability->malware": 1
+  }
+ },
+ "targets": {
+  "source_type": "attack_pattern",
+  "target_type": "x_mitre_asset",
+  "signatures": {
+   "attack_pattern->x_mitre_asset": 524
+  }
+ },
+ "x_mitre_detection": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 1283,
+   "Post-Adversary Device Access->?": 13,
+   "x_mitre_data_component->?": 4,
+   "Without Adversary Device Access->?": 3,
+   "course_of_action->?": 2,
+   "x_mitre_data_source->?": 1,
+   "Availability->?": 1,
+   "Pre-Adversary Device Access->?": 1
+  }
+ },
+ "revoked": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 404,
+   "malware->?": 359,
+   "intrusion_set->?": 124,
+   "tool->?": 56,
+   "course_of_action->?": 48,
+   "campaign->?": 27,
+   "x_mitre_data_component->?": 24,
+   "x_mitre_asset->?": 14,
+   "x_mitre_data_source->?": 13,
+   "x_mitre_tactic->?": 9,
+   "Post-Adversary Device Access->?": 6,
+   "Availability->?": 1,
+   "x_mitre_collection->?": 1,
+   "Without Adversary Device Access->?": 1,
+   "x_mitre_matrix->?": 1
+  }
+ },
+ "used_by_campaign": {
+  "source_type": "attack_pattern",
+  "target_type": "campaign",
+  "signatures": {
+   "attack_pattern->campaign": 578,
+   "malware->campaign": 56,
+   "attack_pattern->intrusion_set": 43,
+   "tool->campaign": 33,
+   "x_mitre_data_component->campaign": 6,
+   "tool->intrusion_set": 6,
+   "course_of_action->campaign": 5,
+   "campaign->campaign": 1
+  }
+ },
+ "x_mitre_system_requirements": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 151
+  }
+ },
+ "x_mitre_permissions_required": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 423,
+   "x_mitre_data_component->?": 1
+  }
+ },
+ "created": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 1037,
+   "malware->?": 692,
+   "course_of_action->?": 293,
+   "x_mitre_data_component->?": 235,
+   "intrusion_set->?": 177,
+   "tool->?": 87,
+   "x_mitre_data_source->?": 84,
+   "campaign->?": 28,
+   "Post-Adversary Device Access->?": 25,
+   "x_mitre_tactic->?": 19,
+   "x_mitre_asset->?": 14,
+   "x_mitre_collection->?": 4,
+   "x_mitre_matrix->?": 3,
+   "Without Adversary Device Access->?": 3,
+   "Pre-Adversary Device Access->?": 2,
+   "Availability->?": 1
+  }
+ },
+ "used_by_tool": {
+  "source_type": "attack_pattern",
+  "target_type": "tool",
+  "signatures": {
+   "attack_pattern->tool": 874,
+   "attack_pattern->malware": 32,
+   "x_mitre_data_component->tool": 7,
+   "course_of_action->tool": 3,
+   "Post-Adversary Device Access->tool": 2
+  }
+ },
+ "used_by_intrusion-set": {
+  "source_type": "attack_pattern",
+  "target_type": "intrusion_set",
+  "signatures": {
+   "attack_pattern->intrusion_set": 4217,
+   "malware->intrusion_set": 581,
+   "tool->intrusion_set": 418,
+   "x_mitre_data_component->intrusion_set": 48,
+   "course_of_action->intrusion_set": 36,
+   "Availability->intrusion_set": 6,
+   "intrusion_set->intrusion_set": 5,
+   "attack_pattern->malware": 3,
+   "Post-Adversary Device Access->intrusion_set": 2,
+   "tool->malware": 1,
+   "malware->malware": 1
+  }
+ },
+ "x_mitre_sectors": {
+  "source_type": "x_mitre_asset",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_asset->?": 12
+  }
+ },
+ "x_mitre_related_assets": {
+  "source_type": "x_mitre_asset",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_asset->?": 10
+  }
+ },
+ "is_x_mitre_asset_type": {
+  "source_type": "x_mitre_asset",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_asset->?": 14
+  }
+ },
+ "x_mitre_deprecated": {
+  "source_type": "course_of_action",
+  "target_type": "?",
+  "signatures": {
+   "course_of_action->?": 245,
+   "attack_pattern->?": 32,
+   "intrusion_set->?": 10,
+   "malware->?": 3,
+   "x_mitre_data_component->?": 3,
+   "x_mitre_data_source->?": 2,
+   "Post-Adversary Device Access->?": 2,
+   "Without Adversary Device Access->?": 2,
+   "x_mitre_tactic->?": 2,
+   "campaign->?": 1,
+   "x_mitre_matrix->?": 1
+  }
+ },
+ "x_mitre_tactic_type": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 180,
+   "Post-Adversary Device Access->?": 25,
+   "Without Adversary Device Access->?": 3,
+   "Pre-Adversary Device Access->?": 3,
+   "x_mitre_data_component->?": 1
+  }
+ },
+ "revoked_by": {
+  "source_type": "attack_pattern",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "attack_pattern->attack_pattern": 173,
+   "intrusion_set->intrusion_set": 6,
+   "Post-Adversary Device Access->attack_pattern": 4,
+   "course_of_action->course_of_action": 1,
+   "malware->malware": 1,
+   "malware->tool": 1,
+   "attack_pattern->x_mitre_data_component": 1,
+   "Without Adversary Device Access->attack_pattern": 1
+  }
+ },
+ "x_mitre_old_attack_id": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 71,
+   "malware->?": 45,
+   "Post-Adversary Device Access->?": 23,
+   "course_of_action->?": 14,
+   "Without Adversary Device Access->?": 3,
+   "tool->?": 1,
+   "Pre-Adversary Device Access->?": 1
+  }
+ },
+ "x_mitre_defense_bypassed": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 179,
+   "attack_pattern->x_mitre_data_source": 4,
+   "attack_pattern->attack_pattern": 2,
+   "course_of_action->?": 1,
+   "x_mitre_data_component->?": 1
+  }
+ },
+ "x_mitre_network_requirements": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 39
+  }
+ },
+ "x_mitre_impact_type": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 26,
+   "Availability->?": 1
+  }
+ },
+ "x_mitre_remote_support": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 44
+  }
+ },
+ "subtechnique_of": {
+  "source_type": "attack_pattern",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "attack_pattern->attack_pattern": 455,
+   "course_of_action->attack_pattern": 2,
+   "x_mitre_data_component->attack_pattern": 1,
+   "x_mitre_data_source->attack_pattern": 1,
+   "Post-Adversary Device Access->attack_pattern": 1
+  }
+ },
+ "x_mitre_effective_permissions": {
+  "source_type": "attack_pattern",
+  "target_type": "?",
+  "signatures": {
+   "attack_pattern->?": 56
+  }
+ },
+ "is_course_of_action_type": {
+  "source_type": "course_of_action",
+  "target_type": "?",
+  "signatures": {
+   "course_of_action->?": 318
+  }
+ },
+ "labels": {
+  "source_type": "course_of_action",
+  "target_type": "?",
+  "signatures": {
+   "course_of_action->?": 52
+  }
+ },
+ "mitigates": {
+  "source_type": "course_of_action",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "course_of_action->attack_pattern": 2194,
+   "course_of_action->Post-Adversary Device Access": 19,
+   "course_of_action->Without Adversary Device Access": 4,
+   "course_of_action->x_mitre_data_component": 3,
+   "course_of_action->Availability": 2,
+   "course_of_action->course_of_action": 2,
+   "course_of_action->x_mitre_data_source": 1
+  }
+ },
+ "is_intrusion_set_type": {
+  "source_type": "intrusion_set",
+  "target_type": "?",
+  "signatures": {
+   "intrusion_set->?": 167,
+   "malware->?": 1
+  }
+ },
+ "aliases": {
+  "source_type": "intrusion_set",
+  "target_type": "intrusion_set",
+  "signatures": {
+   "intrusion_set->intrusion_set": 62,
+   "campaign->campaign": 26,
+   "intrusion_set->?": 7
+  }
+ },
+ "uses_attack_pattern": {
+  "source_type": "malware",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "malware->attack_pattern": 10819,
+   "intrusion_set->attack_pattern": 4400,
+   "tool->attack_pattern": 874,
+   "campaign->attack_pattern": 611,
+   "malware->x_mitre_data_component": 208,
+   "malware->Post-Adversary Device Access": 56,
+   "intrusion_set->x_mitre_data_component": 52,
+   "intrusion_set->course_of_action": 37,
+   "malware->course_of_action": 36,
+   "campaign->x_mitre_data_component": 7,
+   "tool->x_mitre_data_component": 7,
+   "intrusion_set->Availability": 6,
+   "campaign->course_of_action": 5,
+   "tool->course_of_action": 3,
+   "intrusion_set->Post-Adversary Device Access": 2,
+   "tool->Post-Adversary Device Access": 2,
+   "malware->Availability": 1
+  }
+ },
+ "uses_tool": {
+  "source_type": "intrusion_set",
+  "target_type": "tool",
+  "signatures": {
+   "intrusion_set->tool": 424,
+   "campaign->tool": 33,
+   "intrusion_set->malware": 4,
+   "malware->tool": 1
+  }
+ },
+ "uses_malware": {
+  "source_type": "intrusion_set",
+  "target_type": "malware",
+  "signatures": {
+   "intrusion_set->malware": 577,
+   "campaign->malware": 56,
+   "intrusion_set->intrusion_set": 1
+  }
+ },
+ "is_responsible": {
+  "source_type": "intrusion_set",
+  "target_type": "campaign",
+  "signatures": {
+   "intrusion_set->campaign": 13
+  }
+ },
+ "x_mitre_aliases": {
+  "source_type": "malware",
+  "target_type": "malware",
+  "signatures": {
+   "malware->malware": 606,
+   "tool->tool": 77,
+   "malware->?": 46,
+   "tool->?": 20,
+   "intrusion_set->intrusion_set": 1
+  }
+ },
+ "is_malware_type": {
+  "source_type": "malware",
+  "target_type": "?",
+  "signatures": {
+   "malware->?": 726,
+   "intrusion_set->?": 5,
+   "campaign->?": 1
+  }
+ },
+ "is_family": {
+  "source_type": "malware",
+  "target_type": "?",
+  "signatures": {
+   "malware->?": 724,
+   "intrusion_set->?": 5,
+   "campaign->?": 1
+  }
+ },
+ "is_x_mitre_tactic_type": {
+  "source_type": "x_mitre_tactic",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_tactic->?": 20
+  }
+ },
+ "x_mitre_shortname": {
+  "source_type": "x_mitre_tactic",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_tactic->?": 30
+  }
+ },
+ "is_x_mitre_matrix_type": {
+  "source_type": "x_mitre_matrix",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_matrix->?": 3,
+   "x_mitre_collection->?": 2
+  }
+ },
+ "tactic_refs": {
+  "source_type": "x_mitre_matrix",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_matrix->?": 3,
+   "x_mitre_collection->?": 3
+  }
+ },
+ "identity_class": {
+  "source_type": "identity",
+  "target_type": "?",
+  "signatures": {
+   "identity->?": 1
+  }
+ },
+ "is_identity_type": {
+  "source_type": "identity",
+  "target_type": "?",
+  "signatures": {
+   "identity->?": 1
+  }
+ },
+ "last_seen": {
+  "source_type": "campaign",
+  "target_type": "?",
+  "signatures": {
+   "campaign->?": 27,
+   "intrusion_set->?": 4
+  }
+ },
+ "x_mitre_last_seen_citation": {
+  "source_type": "campaign",
+  "target_type": "?",
+  "signatures": {
+   "campaign->?": 27,
+   "intrusion_set->?": 4
+  }
+ },
+ "is_campaign_type": {
+  "source_type": "campaign",
+  "target_type": "?",
+  "signatures": {
+   "campaign->?": 27,
+   "intrusion_set->?": 4
+  }
+ },
+ "is_x_mitre_data_component_type": {
+  "source_type": "x_mitre_data_component",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_data_component->?": 121,
+   "attack_pattern->?": 1
+  }
+ },
+ "x_mitre_data_source_ref": {
+  "source_type": "x_mitre_data_component",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_data_component->?": 121,
+   "attack_pattern->?": 1
+  }
+ },
+ "detects": {
+  "source_type": "x_mitre_data_component",
+  "target_type": "attack_pattern",
+  "signatures": {
+   "x_mitre_data_component->attack_pattern": 2296,
+   "x_mitre_data_component->x_mitre_data_component": 4,
+   "x_mitre_data_component->Post-Adversary Device Access": 4,
+   "x_mitre_data_component->course_of_action": 3,
+   "attack_pattern->attack_pattern": 3,
+   "x_mitre_data_component->Availability": 1
+  }
+ },
+ "x_mitre_collection_layers": {
+  "source_type": "x_mitre_data_source",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_data_source->?": 48,
+   "x_mitre_data_source->x_mitre_data_source": 5,
+   "course_of_action->?": 1
+  }
+ },
+ "is_x_mitre_data_source_type": {
+  "source_type": "x_mitre_data_source",
+  "target_type": "?",
+  "signatures": {
+   "x_mitre_data_source->?": 42,
+   "course_of_action->?": 1
+  }
+ },
+ "first_seen": {
+  "source_type": "campaign",
+  "target_type": "?",
+  "signatures": {
+   "campaign->?": 22,
+   "intrusion_set->?": 4
+  }
+ },
+ "attributed_to": {
+  "source_type": "campaign",
+  "target_type": "intrusion_set",
+  "signatures": {
+   "campaign->intrusion_set": 13
+  }
+ },
+ "x_mitre_first_seen_citation": {
+  "source_type": "campaign",
+  "target_type": "?",
+  "signatures": {
+   "campaign->?": 6
+  }
+ },
+ "is_tool_type": {
+  "source_type": "tool",
+  "target_type": "?",
+  "signatures": {
+   "tool->?": 88,
+   "malware->?": 1
+  }
+ }
+}
