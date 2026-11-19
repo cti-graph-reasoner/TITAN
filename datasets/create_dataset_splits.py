@@ -14,7 +14,7 @@ Split a Q&A CSV into train/val/test sets, *per section*, using a JSON
 - Saves three CSV files in the specified output directory.
 - Prints section distributions for each split.
 
-Robustness:
+Checks:
 - Validates ratios sum to ~1.0.
 - Handles questions not present in the JSON mapping (either drop or assign "Unknown").
 - Fallbacks for tiny sections (e.g., 1–2 rows) to avoid train_test_split errors.
@@ -107,7 +107,7 @@ def _safe_split_section(
 def create_datasets(
     csv_file: str,
     json_file: str,
-    output_dir: str = "SMARTER_COMPLETE_DATASET",
+    output_dir: str = "TITAN_COMPLETE_DATASET",
     train_ratio: float = 0.8,
     val_ratio: float = 0.05,
     test_ratio: float = 0.15,
@@ -204,9 +204,9 @@ def create_datasets(
 
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Create per-section train/val/test splits from CSV + JSON mapping.")
-    p.add_argument("--csv", required=False, default="SMARTER/SMARTER_DATASET.csv", help="Input CSV file path")
-    p.add_argument("--json", required=False, default="SMARTER/SMARTER_QUESTION_PER_SECTION.json", help="Input JSON mapping path")
-    p.add_argument("--out", required=False, default="SMARTER_COMPLETE_DATASET", help="Output directory")
+    p.add_argument("--csv", required=False, default="datasets/CoT/NAVIGATION_DATASET.csv", help="Input CSV file path")
+    p.add_argument("--json", required=False, default="datasets/CoT/NAVIGATION_QUESTION_PER_SECTION.json", help="Input JSON mapping path")
+    p.add_argument("--out", required=False, default="TITAN_COMPLETE_DATASET", help="Output directory")
     p.add_argument("--train", type=float, default=0.80, help="Train ratio")
     p.add_argument("--val", type=float, default=0.05, help="Validation ratio")
     p.add_argument("--test", type=float, default=0.15, help="Test ratio")

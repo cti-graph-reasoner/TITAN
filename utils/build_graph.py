@@ -17,7 +17,7 @@ Notes:
 - Attribute 'type' becomes 'is_<value>_type' (with '-' replaced by '_').
 
 CLI:
-    python build_stix_graph.py --base ../attack-stix-data --out stix_graph_correct.graphml --log-file mitre.txt
+    python utils/build_graph.py --base ../attack-stix-data --out stix_graph_correct.graphml --log-file mitre.txt
 """
 
 from __future__ import annotations
@@ -59,7 +59,7 @@ def to_string_value(value) -> str:
     if isinstance(value, list):
         if len(value) == 0:
             return "Not Available"
-        # original behavior: take first item only
+        # Take first item only
         return to_string_value(value[0])
     if isinstance(value, dict):
         try:
@@ -181,9 +181,7 @@ class StixGraphBuilder:
         src_name = self.id_to_name.get(r.source_ref)
         dst_name = self.id_to_name.get(r.target_ref)
         if not (src_name and dst_name):
-            # If names are missing, skip to keep graph readable (or fallback to IDs)
-            # src_name = src_name or r.source_ref
-            # dst_name = dst_name or r.target_ref
+            # Skip relationships whose endpoints have no name
             return
 
         rel_type = r.relationship_type

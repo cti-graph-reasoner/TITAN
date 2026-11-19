@@ -5,16 +5,16 @@
 Train a LoRA SFT model (Phi-3.5-mini-instruct via Unsloth) on TITAN navigation data.
 
 Expected CSVs (default paths):
-- SMARTER_COMPLETE_DATASET/train_dataset.csv
-- SMARTER_COMPLETE_DATASET/val_dataset.csv
-- SMARTER_COMPLETE_DATASET/test_dataset.csv
+- TITAN_COMPLETE_DATASET/train_dataset.csv
+- TITAN_COMPLETE_DATASET/val_dataset.csv
+- TITAN_COMPLETE_DATASET/test_dataset.csv
 
 Each CSV must contain at least the columns:
 - "Question" : user prompt
 - "Path"     : target sequence (graph navigation path)
 
 Main features:
-- Robust dataset loading & validation
+- Dataset loading & validation
 - Chat template application (phi-3 mapping)
 - LoRA fine-tuning with Unsloth + TRL SFTTrainer
 - Early stopping & best model selection
@@ -165,8 +165,8 @@ def load_model_and_tokenizer(
 # Training
 # -------------------------
 def train(
-    dataset_dir: str = "SMARTER_COMPLETE_DATASET",
-    output_dir: str = "MODELS/phi_smarter",
+    dataset_dir: str = "TITAN_COMPLETE_DATASET",
+    output_dir: str = "MODELS/phi_titan",
     model_name: str = "unsloth/Phi-3.5-mini-instruct",
     learning_rate: float = 3e-4,
     train_batch_size: int = 8,
@@ -214,7 +214,7 @@ def train(
         weight_decay=0.01,
         warmup_steps=50,
         max_grad_norm=1.0,
-        report_to="none",  # set to "tensorboard" if you configure it
+        report_to="none",
         load_best_model_at_end=True,
         save_total_limit=2,
         seed=seed,
@@ -228,7 +228,7 @@ def train(
         dataset_text_field="text",
         max_seq_length=max_seq_length,  # keep consistent with model load
         dataset_num_proc=1,
-        packing=False,  # one example per sequence; set True to pack if your data allows
+        packing=False,  # one example per sequence
         args=args,
         callbacks=[EarlyStoppingCallback(early_stopping_patience=3)],
     )
@@ -249,8 +249,8 @@ def train(
 # -------------------------
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Train TITAN LoRA SFT model (Phi-3 via Unsloth).")
-    p.add_argument("--data", default="SMARTER_COMPLETE_DATASET", help="Folder with train/val/test CSVs")
-    p.add_argument("--out",  default="MODELS/phi_smarter", help="Output directory for model artifacts")
+    p.add_argument("--data", default="TITAN_COMPLETE_DATASET", help="Folder with train/val/test CSVs")
+    p.add_argument("--out",  default="MODELS/phi_titan", help="Output directory for model artifacts")
     p.add_argument("--model", default="unsloth/Phi-3.5-mini-instruct", help="HF model name")
     p.add_argument("--lr", type=float, default=3e-4, help="Learning rate")
     p.add_argument("--train-bsz", type=int, default=8, help="Per-device train batch size")

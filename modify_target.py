@@ -121,7 +121,7 @@ def process_yaml(inp: str, out: str, q2target: Dict[str, str], dry_run: bool, no
             total += 1
             new_target = q2target.get(q)
             if new_target:
-                # Normalize to string (your YAML had target as list; we store single improved string)
+                # Store target as a single string
                 prev = item.get("target")
                 if prev != new_target:
                     updated += 1

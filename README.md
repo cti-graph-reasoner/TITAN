@@ -80,15 +80,18 @@ TITAN/
 │  ├─ paraphrase.py                     # optional: generate target variations via LLM
 │  └─ useful_cot.yaml                   # question templates with <PATH>...</PATH> and target
 ├─ graph_algorithm.py                   # deterministic path execution utilities
-├─ train_titan.py                       # LoRA SFT training (Unsloth + TRL)
-├─ test_titan.py                        # interactive tester for path planning & execution
+├─ train.py                             # LoRA SFT training (Unsloth + TRL)
+├─ test.py                              # interactive tester for path planning & execution
 ├─ modify_target.py                     # apply paraphrased targets to YAML/JSON
+├─ AGENTS.md                            # guide for coding agents working on the repository
 └─ README.md
 ```
 
-> Notes  
-> - `paraphrase.py` is optional and not used unless applied via `modify_target.py`.  
-> - Update the `<img src="images/...">` path if your image file name differs.
+> Note: `paraphrase.py` is optional and not used unless applied via `modify_target.py`.
+
+### AGENTS.md
+
+We added an [`AGENTS.md`](AGENTS.md) file so that coding agents can read and work on the code more reliably. It summarises the role of each script, the pipeline commands with their actual CLI arguments, the `<PATH>` format, the conventions that must stay consistent across files (e.g. the chat template shared by `train.py` and `test.py`), and the checks to run after editing.
 
 ---
 
@@ -141,7 +144,7 @@ python utils/build_dataset.py \
   --templates utils/useful_cot.yaml \
   --graph titan_graph.graphml \
   --out datasets/CoT/NAVIGATION_DATASET.json \
-  --out datasets/CoT/NAVIGATION_QUESTION_PER_SECTION.json
+  --out-sections datasets/CoT/NAVIGATION_QUESTION_PER_SECTION.json
 ```
 
 Re-run for **NoCoT** using the corresponding output folder:
@@ -216,7 +219,7 @@ python datasets/create_dataset_splits.py \
 
 ## 5. Train the Path-Planner (LoRA SFT)
 
-Script: `train_titan.py` — fine-tunes an LLM (e.g., Phi-3.5, LLaMA, Qwen) using LoRA adapters.
+Script: `train.py` — fine-tunes an LLM (e.g., Phi-3.5, LLaMA, Qwen) using LoRA adapters.
 
 Dataset directory structure:
 ```
@@ -228,7 +231,7 @@ TITAN_COMPLETE_DATASET/
 
 Example:
 ```bash
-python train_titan.py \
+python train.py \
   --data TITAN_COMPLETE_DATASET \
   --out MODELS/phi_titan \
   --model unsloth/Phi-3.5-mini-instruct \
@@ -243,11 +246,11 @@ python train_titan.py \
 
 ## 6. Interactive Testing and Graph Execution
 
-Script: `test_titan.py`  
+Script: `test.py`  
 Loads the trained model, generates an executable `<PATH>...</PATH>` plan, and executes it over the TITAN Graph.
 
 ```bash
-python test_titan.py \
+python test.py \
   --model MODELS/phi_titan \
   --names NAMES.txt \
   --graph titan_graph.graphml \
@@ -283,7 +286,7 @@ python utils/build_dataset.py \
   --templates utils/useful_cot.yaml \
   --graph titan_graph.graphml \
   --out datasets/CoT/NAVIGATION_DATASET.json \
-  --out datasets/CoT/NAVIGATION_QUESTION_PER_SECTION.json
+  --out-sections datasets/CoT/NAVIGATION_QUESTION_PER_SECTION.json
 
 # 3. (Optional) Apply paraphrased targets
 python modify_target.py --csv target_variations.csv \
@@ -307,10 +310,10 @@ python datasets/create_dataset_splits.py \
   --out datasets/CoT/COMPLETE --train 0.80 --val 0.05 --test 0.15
 
 # 6. Train
-python train_titan.py --data TITAN_COMPLETE_DATASET --out MODELS/phi_titan
+python train.py --data TITAN_COMPLETE_DATASET --out MODELS/phi_titan
 
 # 7. Test
-python test_titan.py --model MODELS/phi_titan --names NAMES.txt --graph titan_graph.graphml --rels Relationship_Descriptions.txt
+python test.py --model MODELS/phi_titan --names NAMES.txt --graph titan_graph.graphml --rels Relationship_Descriptions.txt
 ```
 
 
