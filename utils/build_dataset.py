@@ -279,7 +279,7 @@ def _path_prompt(
         node_type = f"the top {number} {node_type}"
 
     if node_type and "description" not in relationship:
-        node_descr = None  # could be _node_type_description(node_type)
+        node_descr = None
         if last:
             if node_descr:
                 return (
@@ -415,7 +415,8 @@ To begin, let's focus on nodes of type {entity_type_2} to establish our initial 
             txt += f"\n{step_line}"
 
     final_path = _join_path_tags(path)
-    txt += f"\n{_final_prompt(final_path, graph, target, f'\\'{name_2}\\'')}"
+    quoted_name = f"'{name_2}'"
+    txt += f"\n{_final_prompt(final_path, graph, target, quoted_name)}"
     return txt
 
 
@@ -634,7 +635,6 @@ def generate_questions_for_type(
         sampled = random.sample(combos, sample_size) if combos and sample_size > 0 else []
         print(f"Generated {len(combos)} combinations. Processing {len(sampled)} of them.")
 
-        # Fixed: argument order when submitting to thread pool
         with ThreadPoolExecutor() as ex:
             futures = [
                 ex.submit(
@@ -722,7 +722,7 @@ def generate_all_questions(
             path = entry["path"]
             target = entry["target"][0]
 
-            # Skip specific degenerate path if needed (kept from original behavior)
+            # Skip degenerate description-only path
             if path == "<PATH>description</PATH>":
                 continue
 

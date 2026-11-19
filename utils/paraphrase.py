@@ -5,11 +5,10 @@
 Generate target (Objective) improvements and question variations from YAML templates
 using an open-source LLM (e.g., Llama-3.1-8B-Instruct on Hugging Face).
 
-Key fixes vs. original:
-- Proper chat usage with tokenizer.apply_chat_template (not passing messages to a text pipeline).
-- Correct extraction of generated text (string, not nested dicts).
-- Safer retries and validation logic for bracket-preservation and malware-term preservation.
-- Clean I/O handling for YAML and CSV.
+Features:
+- Chat generation via tokenizer.apply_chat_template.
+- Retries and validation for bracket and malware-term preservation.
+- YAML and CSV I/O.
 """
 
 from __future__ import annotations
@@ -150,7 +149,7 @@ def extract_malware_terms(text: str) -> List[str]:
     """Return malware-related terms present in the text (case-insensitive)."""
     t = (text or "").lower()
     found = [term for term in _MALWARE_TERMS if term in t]
-    # Return original case for a nicer output (optional)
+    # Return terms in their original case
     return found
 
 
@@ -330,7 +329,7 @@ def save_to_csv(output_file: str, rows: List[Tuple[str, Union[str, List[str]]]])
 # ---------------------------------------------------------------------------
 
 def main() -> None:
-    # Load model (adjust device_map if you want a specific GPU like "cuda:5")
+    # Load model
     llm = load_model(
         model_name="meta-llama/Llama-3.1-8B-Instruct",
         device_map="auto",
@@ -341,15 +340,13 @@ def main() -> None:
     useful_template_file = "../useful_cot.yaml"
     useful_templates = load_templates(useful_template_file)
 
-    # Collect questions (and associated target templates if needed)
+    # Collect questions
     question_items: List[Tuple[str, Union[str, List[str]]]] = []
     for section in useful_templates.get("templates", {}):
         for entry in tqdm(useful_templates["templates"][section], desc=f"Scanning '{section}' ..."):
             if not isinstance(entry, dict):
                 continue
             question_text = entry.get("question")
-            # target may be a list; we don't critically need it to improve objectives
-            # but we keep for debug/printing if desired:
             target_tpl = entry.get("target", [])
             if isinstance(target_tpl, list) and target_tpl:
                 _ = target_tpl[0]
